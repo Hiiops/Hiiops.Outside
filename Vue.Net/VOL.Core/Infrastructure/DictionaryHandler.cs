@@ -14,8 +14,8 @@ namespace VOL.Core.Infrastructure
         /// <summary>
         /// 获取自定义数据源sql
         /// </summary>
-        /// <param name="dicNo"></param>
-        /// <param name="originalSql"></param>
+        /// <param name="dicNo">字典编号</param>
+        /// <param name="originalSql">原始sql</param>
         /// <returns></returns>
         public static string GetCustomDBSql(string dicNo, string originalSql)
         {
@@ -33,8 +33,7 @@ namespace VOL.Core.Infrastructure
         /// <summary>
         /// 获取解决的数据源，只能看到自己与下级所有角色
         /// </summary>
-        /// <param name="context"></param>
-        /// <param name="originalSql"></param>
+        /// <param name="originalSql">原始Sql语句</param>
         /// <returns></returns>
         public static string GetRolesSql(string originalSql)
         {
