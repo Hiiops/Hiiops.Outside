@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOL.WebApi", "VOL.WebApi\VO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiiops.Shop", "Hiiops.Shop\Hiiops.Shop.csproj", "{5F71EAD7-4865-4CBF-8ACD-880961AB361B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiiops.Cart", "Hiiops.Cart\Hiiops.Cart.csproj", "{7248171E-C409-4FD4-B607-66E757439CA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{5F71EAD7-4865-4CBF-8ACD-880961AB361B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F71EAD7-4865-4CBF-8ACD-880961AB361B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F71EAD7-4865-4CBF-8ACD-880961AB361B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7248171E-C409-4FD4-B607-66E757439CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7248171E-C409-4FD4-B607-66E757439CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7248171E-C409-4FD4-B607-66E757439CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7248171E-C409-4FD4-B607-66E757439CA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

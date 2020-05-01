@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Ui/Tc0Mr+KtQW+fdNGCel8xX6S+fEJTbegFYHTeJWnh2zgu4hkAN1xGwGx7Jwg9EsgDZyNxZE1o9mteCORKEw==",
+  "dgSpecHash": "hcEro7nt16+GHaGhf1y6Dz1c1HavF/KdbVgrBCApJ7ab3CSyNqSxiw4IUy8sSlyXdYI8TI/4ooruEmVaqYMyzw==",
   "success": true,
-  "projectFilePath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
+  "projectFilePath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac.extensions.dependencyinjection\\5.0.1\\autofac.extensions.dependencyinjection.5.0.1.nupkg.sha512",

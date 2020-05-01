@@ -9314,11 +9314,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
-      "projectName": "Hiiops.Shop",
-      "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
+      "projectUniqueName": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
+      "projectName": "Hiiops.Cart",
+      "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\obj\\",
+      "outputPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
