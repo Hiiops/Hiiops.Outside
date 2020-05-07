@@ -13,8 +13,8 @@ using VOL.Entity.SystemModels;
 
 namespace VOL.Entity.DomainModels
 {
-    [Entity(TableCnName = "车辆管理",TableName = "Hiiops_Cart")]
-    public class Hiiops_Cart:BaseEntity
+    [Entity(TableCnName = "分类管理",TableName = "Hiiops_Cart_Category")]
+    public class Hiiops_Cart_Category:BaseEntity
     {
         /// <summary>
        ///主键
@@ -26,9 +26,9 @@ namespace VOL.Entity.DomainModels
        public int Id { get; set; }
 
        /// <summary>
-       ///名称
+       ///分类
        /// </summary>
-       [Display(Name ="名称")]
+       [Display(Name ="分类")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
        [Editable(true)]
@@ -36,71 +36,34 @@ namespace VOL.Entity.DomainModels
        public string Name { get; set; }
 
        /// <summary>
-       ///品牌
+       ///父级
        /// </summary>
-       [Display(Name ="品牌")]
+       [Display(Name ="父级")]
        [Column(TypeName="int")]
        [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
-       public int BrandId { get; set; }
-
-       /// <summary>
-       ///分类
-       /// </summary>
-       [Display(Name ="分类")]
-       [Column(TypeName="int")]
-       [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
-       public int CategoryId { get; set; }
+       public int? ParentId { get; set; }
 
        /// <summary>
        ///封面
        /// </summary>
        [Display(Name ="封面")]
-       [Column(TypeName="datetime")]
+       [Column(TypeName="nvarchar(max)")]
        [Editable(true)]
-       public DateTime? CoverImage { get; set; }
+       public string CoverImage { get; set; }
 
        /// <summary>
-       ///主图
+       ///浏览
        /// </summary>
-       [Display(Name ="主图")]
-       [MaxLength(2000)]
-       [Column(TypeName="nvarchar(2000)")]
-       [Editable(true)]
-       public string Images { get; set; }
-
-       /// <summary>
-       ///详情
-       /// </summary>
-       [Display(Name ="详情")]
-       [MaxLength(16)]
-       [Column(TypeName="ntext(16)")]
-       [Editable(true)]
-       public string DetailContent { get; set; }
-
-       /// <summary>
-       ///静态页面
-       /// </summary>
-       [Display(Name ="静态页面")]
-       [MaxLength(2000)]
-       [Column(TypeName="nvarchar(2000)")]
-       [Editable(true)]
-       public string StaticUrl { get; set; }
-
-       /// <summary>
-       ///浏览数
-       /// </summary>
-       [Display(Name ="浏览数")]
+       [Display(Name ="浏览")]
        [Column(TypeName="int")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public int PV { get; set; }
 
        /// <summary>
-       ///启用状态
+       ///状态
        /// </summary>
-       [Display(Name ="启用状态")]
+       [Display(Name ="状态")]
        [Column(TypeName="int")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
@@ -112,6 +75,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="关键字")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
+       [Editable(true)]
        public string Keywords { get; set; }
 
        /// <summary>
@@ -120,8 +84,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="排序")]
        [Column(TypeName="int")]
        [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
-       public int Sort { get; set; }
+       public int? Sort { get; set; }
 
        /// <summary>
        ///推荐
@@ -148,49 +111,6 @@ namespace VOL.Entity.DomainModels
        public bool? SetTop { get; set; }
 
        /// <summary>
-       ///促销价格
-       /// </summary>
-       [Display(Name ="促销价格")]
-       [MaxLength(510)]
-       [Column(TypeName="nvarchar(510)")]
-       [Editable(true)]
-       public string SalePrice { get; set; }
-
-       /// <summary>
-       ///价格
-       /// </summary>
-       [Display(Name ="价格")]
-       [MaxLength(510)]
-       [Column(TypeName="nvarchar(510)")]
-       [Editable(true)]
-       public string Price { get; set; }
-
-       /// <summary>
-       ///里程
-       /// </summary>
-       [Display(Name ="里程")]
-       [MaxLength(510)]
-       [Column(TypeName="nvarchar(510)")]
-       [Editable(true)]
-       public string Mileage { get; set; }
-
-       /// <summary>
-       ///上牌时间
-       /// </summary>
-       [Display(Name ="上牌时间")]
-       [Column(TypeName="datetime")]
-       [Editable(true)]
-       public DateTime? LicenseTime { get; set; }
-
-       /// <summary>
-       ///出售
-       /// </summary>
-       [Display(Name ="出售")]
-       [Column(TypeName="bit")]
-       [Editable(true)]
-       public bool? Sale { get; set; }
-
-       /// <summary>
        ///备注
        /// </summary>
        [Display(Name ="备注")]
@@ -200,16 +120,16 @@ namespace VOL.Entity.DomainModels
        public string Remark { get; set; }
 
        /// <summary>
-       ///上传人ID
+       ///添加人ID
        /// </summary>
-       [Display(Name ="上传人ID")]
+       [Display(Name ="添加人ID")]
        [Column(TypeName="int")]
        public int? CreateID { get; set; }
 
        /// <summary>
-       ///上传人
+       ///添加人
        /// </summary>
-       [Display(Name ="上传人")]
+       [Display(Name ="添加人")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
        public string Creator { get; set; }

@@ -58,5 +58,13 @@ let viewgird = [
         path: '/Hiiops_Cart',
         name: 'Hiiops_Cart',
         component: () => import('@/views/cart/Hiiops_Cart.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Brand',
+        name: 'Hiiops_Cart_Brand',
+        component: () => import('@/views/cart/Hiiops_Cart_Brand.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Category',
+        name: 'Hiiops_Cart_Category',
+        component: () => import('@/views/cart/Hiiops_Cart_Category.vue')
     }]
 export default viewgird

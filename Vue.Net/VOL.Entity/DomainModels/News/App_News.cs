@@ -29,8 +29,8 @@ namespace VOL.Entity.DomainModels
        ///标题
        /// </summary>
        [Display(Name ="标题")]
-       [MaxLength(50)]
-       [Column(TypeName="nvarchar(50)")]
+       [MaxLength(100)]
+       [Column(TypeName="nvarchar(100)")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Title { get; set; }
@@ -47,8 +47,8 @@ namespace VOL.Entity.DomainModels
        ///发布人
        /// </summary>
        [Display(Name ="发布人")]
-       [MaxLength(50)]
-       [Column(TypeName="nvarchar(50)")]
+       [MaxLength(100)]
+       [Column(TypeName="nvarchar(100)")]
        public string Author { get; set; }
 
        /// <summary>
@@ -62,8 +62,7 @@ namespace VOL.Entity.DomainModels
        ///封面图片
        /// </summary>
        [Display(Name ="封面图片")]
-       [MaxLength(500)]
-       [Column(TypeName="nvarchar(500)")]
+       [Column(TypeName="nvarchar(max)")]
        [Editable(true)]
        public string ImageUrl { get; set; }
 
@@ -71,16 +70,16 @@ namespace VOL.Entity.DomainModels
        ///图片(大图)
        /// </summary>
        [Display(Name ="图片(大图)")]
-       [MaxLength(500)]
-       [Column(TypeName="nvarchar(500)")]
+       [MaxLength(1000)]
+       [Column(TypeName="nvarchar(1000)")]
        public string BigImageUrls { get; set; }
 
        /// <summary>
        ///新闻地址
        /// </summary>
        [Display(Name ="新闻地址")]
-       [MaxLength(200)]
-       [Column(TypeName="nvarchar(200)")]
+       [MaxLength(400)]
+       [Column(TypeName="nvarchar(400)")]
        [Editable(true)]
        public string DetailUrl { get; set; }
 
@@ -105,10 +104,10 @@ namespace VOL.Entity.DomainModels
        ///是否今日推荐
        /// </summary>
        [Display(Name ="是否今日推荐")]
-       [Column(TypeName="sbyte")]
+       [Column(TypeName="smallint")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
-       public sbyte DailyRecommend { get; set; }
+       public int DailyRecommend { get; set; }
 
        /// <summary>
        ///推荐排序
@@ -122,9 +121,9 @@ namespace VOL.Entity.DomainModels
        ///是否启用
        /// </summary>
        [Display(Name ="是否启用")]
-       [Column(TypeName="sbyte")]
+       [Column(TypeName="smallint")]
        [Editable(true)]
-       public sbyte? Enable { get; set; }
+       public int? Enable { get; set; }
 
        /// <summary>
        ///创建人Id
@@ -137,8 +136,8 @@ namespace VOL.Entity.DomainModels
        ///发布人
        /// </summary>
        [Display(Name ="发布人")]
-       [MaxLength(30)]
-       [Column(TypeName="nvarchar(30)")]
+       [MaxLength(60)]
+       [Column(TypeName="nvarchar(60)")]
        [Editable(true)]
        public string Creator { get; set; }
 
@@ -161,8 +160,8 @@ namespace VOL.Entity.DomainModels
        ///修改人
        /// </summary>
        [Display(Name ="修改人")]
-       [MaxLength(30)]
-       [Column(TypeName="nvarchar(30)")]
+       [MaxLength(60)]
+       [Column(TypeName="nvarchar(60)")]
        public string Modifier { get; set; }
 
        /// <summary>
