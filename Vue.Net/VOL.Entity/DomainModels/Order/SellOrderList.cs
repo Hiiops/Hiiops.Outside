@@ -13,7 +13,7 @@ using VOL.Entity.SystemModels;
 
 namespace VOL.Entity.DomainModels
 {
-    [Entity(TableCnName = "订单明细")]
+    [Entity(TableCnName = "订单明细",TableName = "SellOrderList")]
     public class SellOrderList:BaseEntity
     {
         /// <summary>
@@ -21,7 +21,6 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Key]
        [Display(Name ="OrderList_Id")]
-       [MaxLength(36)]
        [Column(TypeName="uniqueidentifier")]
        [Required(AllowEmptyStrings=false)]
        public Guid OrderList_Id { get; set; }
@@ -30,8 +29,7 @@ namespace VOL.Entity.DomainModels
        ///订单Id
        /// </summary>
        [Display(Name ="订单Id")]
-       [MaxLength(36)]
-       [Column(TypeName= "uniqueidentifier")]
+       [Column(TypeName="uniqueidentifier")]
        [Required(AllowEmptyStrings=false)]
        public Guid Order_Id { get; set; }
 
@@ -39,8 +37,8 @@ namespace VOL.Entity.DomainModels
        ///商品名称
        /// </summary>
        [Display(Name ="商品名称")]
-       [MaxLength(200)]
-       [Column(TypeName="nvarchar(200)")]
+       [MaxLength(400)]
+       [Column(TypeName="nvarchar(400)")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string ProductName { get; set; }
@@ -49,10 +47,9 @@ namespace VOL.Entity.DomainModels
        ///批次
        /// </summary>
        [Display(Name ="批次")]
-       [MaxLength(255)]
-       [Column(TypeName="nvarchar(255)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
        public string MO { get; set; }
 
        /// <summary>
@@ -68,7 +65,7 @@ namespace VOL.Entity.DomainModels
        ///重量
        /// </summary>
        [Display(Name ="重量")]
-       [DisplayFormat(DataFormatString="11,2")]
+       [DisplayFormat(DataFormatString="18,2")]
        [Column(TypeName="decimal")]
        [Editable(true)]
        public decimal? Weight { get; set; }
@@ -77,8 +74,8 @@ namespace VOL.Entity.DomainModels
        ///备注
        /// </summary>
        [Display(Name ="备注")]
-       [MaxLength(1000)]
-       [Column(TypeName="nvarchar(1000)")]
+       [MaxLength(2000)]
+       [Column(TypeName="nvarchar(2000)")]
        [Editable(true)]
        public string Remark { get; set; }
 
@@ -93,8 +90,8 @@ namespace VOL.Entity.DomainModels
        ///创建人
        /// </summary>
        [Display(Name ="创建人")]
-       [MaxLength(255)]
-       [Column(TypeName="nvarchar(255)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Creator { get; set; }
 
        /// <summary>
@@ -115,8 +112,8 @@ namespace VOL.Entity.DomainModels
        ///修改人
        /// </summary>
        [Display(Name ="修改人")]
-       [MaxLength(255)]
-       [Column(TypeName="nvarchar(255)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Modifier { get; set; }
 
        /// <summary>

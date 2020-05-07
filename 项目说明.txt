@@ -1,12 +1,12 @@
-Vol.Vue£ºÎªÇ°¶ËÏîÄ¿
-Vol.Net£ºÎªºóÌ¨ÏîÄ¿(VOL.WebÏÖÔÚÒÑ²»¿ÉÓÃ£¬ºóÃæ»áÖØÐÂ¿ª·¢£¬Ä¿Ç°Ê¹ÓÃµÄVOL.WebApi×÷Îªºó¶Ë½Ó¿Ú)
+Vol.Vueï¼šä¸ºå‰ç«¯é¡¹ç›®
+Vol.Netï¼šä¸ºåŽå°é¡¹ç›®
 
-DBÌá¹©ÁËmysqlÓësqlserverÊý¾Ý¿â½Å±¾£¬½Å±¾Àï°üÀ¨±í½á¹¹ÓëInsertÊý¾Ý
-Ö´ÐÐ½Å±¾Ê±£¬ÏÈÌáÇ°´´½¨Ò»¸öÊý¾Ý¿â£¬Êý¾Ý¿âÃû£ºnetcoredev
+DBæä¾›äº†mysqlä¸Žsqlserveræ•°æ®åº“è„šæœ¬ï¼Œè„šæœ¬é‡ŒåŒ…æ‹¬è¡¨ç»“æž„ä¸ŽInsertæ•°æ®
+æ‰§è¡Œè„šæœ¬æ—¶ï¼Œå…ˆæå‰åˆ›å»ºä¸€ä¸ªæ•°æ®åº“ï¼Œæ•°æ®åº“åï¼šnetcoredev
 
-Èç¹ûÊ¹ÓÃµÄÊÇsqlserver2012ÒÔÏÂµÄ°æ±¾AutofacContainerModuleExtension.csÀàÖÐ:
+å¦‚æžœä½¿ç”¨çš„æ˜¯sqlserver2012ä»¥ä¸‹çš„ç‰ˆæœ¬AutofacContainerModuleExtension.csç±»ä¸­:
  optionsBuilder.UseSqlServer(connectionString);
-Ìæ»»Îª
+æ›¿æ¢ä¸º
  optionsBuilder.UseSqlServer(connectionString,sqlOption=>sqlOption.UseRowNumberForPaging());
 
 
