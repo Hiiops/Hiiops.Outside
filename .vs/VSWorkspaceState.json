@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DB",
     "\\DB\\sqlserver",
-    "\\Vue.Net"
+    "\\Vue.Net\\VOL.Core",
+    "\\Vue.Net\\VOL.Core\\Controllers",
+    "\\Vue.Net\\VOL.Core\\Controllers\\Basic",
+    "\\Vue.Net\\VOL.WebApi"
   ],
-  "SelectedNode": "\\Vue.Net\\VOL.sln",
   "PreviewInSolutionExplorer": false
 }
