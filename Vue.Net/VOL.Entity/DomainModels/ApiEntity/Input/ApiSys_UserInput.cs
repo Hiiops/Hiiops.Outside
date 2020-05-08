@@ -12,9 +12,9 @@ namespace VOL.Entity.DomainModels
     public class ApiSys_UserInput
     {
         /// <summary>
-       ///用户名
+       ///帐号
        /// </summary>
-       [Display(Name ="用户名")]
+       [Display(Name ="帐号")]
        [MaxLength(200)]
        [Column(TypeName="nvarchar(200)")]
        [Editable(true)]
@@ -27,6 +27,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="密码")]
        [MaxLength(400)]
        [Column(TypeName="nvarchar(400)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string UserPwd { get; set; }
 

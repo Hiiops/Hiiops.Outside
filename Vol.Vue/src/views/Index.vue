@@ -12,7 +12,7 @@
     </div>
     <div class="vol-container">
       <div class="vol-header">
-        <span class="header-text">支持前端、后台业务代码扩展的快速开发框架</span>
+        <span class="header-text">业务开发系统</span>
         <div class="header-info">
           <div class="h-link">
             <ul>
@@ -106,9 +106,7 @@ export default {
       log: imgUrl,
       date: "",
       theme: "blue",
-      links: [
-        { text: "框架文档", path: "/document", id: -2 },
-        { text: "GitHub", path: "#", id: -3 },
+      links: [ 
         { text: "个人中心", path: "/UserInfo", id: -1 },
         { text: "安全退出", path: "/login", id: -4 }
       ],
@@ -173,11 +171,7 @@ export default {
       localStorage.setItem("vol_theme", name);
     },
     to(item) {
-      if (item.path == "#") {
-        window.open("https://github.com/cq-panda/Vue.NetCore");
-        return;
-      }
-
+       
       var hasId = this.navigation.find(function(x) {
         return x.id == item.id;
       });

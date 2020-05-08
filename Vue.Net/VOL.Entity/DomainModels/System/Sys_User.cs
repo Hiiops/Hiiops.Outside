@@ -14,13 +14,13 @@ using VOL.Entity.SystemModels;
 
 namespace VOL.Entity.DomainModels
 {
-    [Entity(ApiInput = typeof(ApiSys_UserInput),ApiOutput = typeof(ApiSys_UserOutput))]
+    [Entity(TableCnName = "用户管理",TableName = "Sys_User",ApiInput = typeof(ApiSys_UserInput),ApiOutput = typeof(ApiSys_UserOutput))]
     public class Sys_User:BaseEntity
     {
         /// <summary>
-       ///用户名
+       ///帐号
        /// </summary>
-       [Display(Name ="用户名")]
+       [Display(Name ="帐号")]
        [MaxLength(200)]
        [Column(TypeName="nvarchar(200)")]
        [Editable(true)]
@@ -106,9 +106,9 @@ namespace VOL.Entity.DomainModels
        public int? AppType { get; set; }
 
        /// <summary>
-       ///用户真实姓名
+       ///真实姓名
        /// </summary>
-       [Display(Name ="用户真实姓名")]
+       [Display(Name ="真实姓名")]
        [MaxLength(40)]
        [Column(TypeName="nvarchar(40)")]
        [Editable(true)]
@@ -122,6 +122,7 @@ namespace VOL.Entity.DomainModels
        [MaxLength(400)]
        [JsonIgnore]
        [Column(TypeName="nvarchar(400)")]
+       [Editable(true)]
        public string UserPwd { get; set; }
 
        /// <summary>
@@ -133,9 +134,9 @@ namespace VOL.Entity.DomainModels
        public DateTime? CreateDate { get; set; }
 
        /// <summary>
-       ///是否手机用户
+       ///手机用户
        /// </summary>
-       [Display(Name ="是否手机用户")]
+       [Display(Name ="手机用户")]
        [Column(TypeName="int")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]

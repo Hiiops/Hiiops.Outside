@@ -2,9 +2,8 @@
   <div class="tm-bg" style="height: 100%; width: 100%;">
     <!-- <div class="log-bg"></div> -->
     <div class="login-contianer">
-      <div class="login-project">
-        <span class="project-name large">vol.vue</span>
-        <span class="desc">前端、后台可扩展的快速开发框架</span>
+      <div class="login-project"> 
+        <span class="desc">业务开发系统</span>
       </div>
       <div class="login-form">
         <Menu mode="horizontal" style="margin-bottom: 30px;" active-name="1">
@@ -12,7 +11,7 @@
             <Icon type="md-contacts" />帐号登陆
           </MenuItem>
           <MenuItem name="2">
-            <Icon type="ios-mail" />短信登陆
+            <Icon type="ios-mail" />内部登录
           </MenuItem>
         </Menu>
         <div class="form-user">
@@ -46,20 +45,15 @@
         <div style="loging-btn">
           <Button size="large" type="info" @click="login" long>登陆</Button>
         </div>
-        <div style="padding-top: 10px;text-align: right;">登陆帐号admin666,密码123456(本地帐号admin,密码123456)</div>
+        <div style="padding-top: 10px;text-align: right;">海心科技&&copy</div>
         <div class="action">
           <a @click="()=>{}">注册</a>
           <a @click="()=>{}">忘记密码</a>
         </div>
       </div>
     </div>
-    <div class="login-footer">
-      <a @click="toGitHub">
-        <Icon type="logo-github" />GitHub
-      </a>
-      <a @click="()=>{this.$Message.info('还没写好')}">博客园介绍</a>
-      <a>QQ群：还没想好</a>
-      <a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备19056538号-1</a>
+    <div class="login-footer"> 
+      <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备18072067号</a>
     </div>
   </div>
 </template>
@@ -70,10 +64,7 @@ export default {
       userInfo: { userName: "", passWord: "", checkbox: [] }
     };
   },
-  methods: {
-    toGitHub() {
-      window.open("https://github.com/cq-panda/Vue.NetCore");
-    },
+  methods: { 
     login() {
       if (this.userInfo.userName == "" || this.userInfo.userName.trim() == "")
         return this.$Message.error("请输入用户名");
@@ -105,8 +96,8 @@ export default {
 <style lang="less" scoped>
 .tm-bg {
   min-width: 700px;
-  background-color: #330000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233b3b6b'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23146cc9' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23146cc9' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background: -webkit-linear-gradient(rgba(6, 34, 160, 0.856), rgba(238, 38, 38, 0.253)); /* Safari 5.1 - 6.0 */
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10%25' height='10%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='2' cy='218' r='200' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233b3b6b'/%3E%3Cstop offset='4' stop-color='%23000000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23146cc9' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23146cc9' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.9'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='150' r='0'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
 }
@@ -226,7 +217,7 @@ input:-webkit-autofill {
 }
 .login-footer {
   padding: 10px;
-  background: #4c4b4b;
+  background: transparent;
   text-align: center;
   font-size: 16px;
   position: absolute;
@@ -242,7 +233,7 @@ input:-webkit-autofill {
   }
   a {
     margin-left: 30px;
-    color: #f9ebd0;
+    color: whitesmoke;
   }
 }
 </style>
