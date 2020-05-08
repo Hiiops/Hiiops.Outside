@@ -57,16 +57,15 @@ namespace VOL.Entity.DomainModels
        ///封面
        /// </summary>
        [Display(Name ="封面")]
-       [Column(TypeName="datetime")]
+       [Column(TypeName="nvarchar(max)")]
        [Editable(true)]
-       public DateTime? CoverImage { get; set; }
+       public string CoverImage { get; set; }
 
        /// <summary>
        ///主图
        /// </summary>
        [Display(Name ="主图")]
-       [MaxLength(2000)]
-       [Column(TypeName="nvarchar(2000)")]
+       [Column(TypeName="nvarchar(max)")]
        [Editable(true)]
        public string Images { get; set; }
 

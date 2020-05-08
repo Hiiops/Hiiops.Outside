@@ -40,7 +40,7 @@ namespace VOL.AppManager.Services
             {
                 return webResponseContent.Error("请求的数据已发生变化,请刷新页面重新提交");
             }
-            string template = FileHelper.ReadFile(@"Template\\AppHtml\\news.html");
+            string template = FileHelper.ReadFile(@"Template\\AppHtml\\cart.html");
             if (string.IsNullOrEmpty(template))
             {
                 return webResponseContent.Error("未获取到页面的模板,请确认模板是否存在");
@@ -51,7 +51,7 @@ namespace VOL.AppManager.Services
             if (!string.IsNullOrEmpty(news.DetailUrl) && news.DetailUrl.IndexOf("/") != -1 && news.DetailUrl.Split(".").Length == 2)
             {
                 var file = news.DetailUrl.Split("/");
-                fileName = file[file.Length - 1];
+                fileName = file[^1];
                 filePath = news.DetailUrl.Replace(fileName, "");
                 urlPath = filePath;
             }

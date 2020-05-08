@@ -26,22 +26,21 @@ namespace VOL.Entity.DomainModels
        public int Id { get; set; }
 
        /// <summary>
+       ///品牌
+       /// </summary>
+       [Display(Name ="品牌")]
+       [Column(TypeName="nvarchar(max)")]
+       [Editable(true)]
+       [Required(AllowEmptyStrings=false)]
+       public string Name { get; set; }
+
+       /// <summary>
        ///父级
        /// </summary>
        [Display(Name ="父级")]
        [Column(TypeName="int")]
        [Editable(true)]
        public int? ParentId { get; set; }
-
-       /// <summary>
-       ///品牌
-       /// </summary>
-       [Display(Name ="品牌")]
-       [MaxLength(510)]
-       [Column(TypeName="nvarchar(510)")]
-       [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
-       public string Name { get; set; }
 
        /// <summary>
        ///排序字母

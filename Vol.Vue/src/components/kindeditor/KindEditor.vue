@@ -546,5 +546,6 @@ export default {
   background-position: 0px -496px;
   width: 16px;
   height: 16px;
+  z-index: 9999999;
 }
 </style>
