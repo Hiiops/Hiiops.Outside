@@ -9308,24 +9308,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jtu\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\cam\\github\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
+      "projectUniqueName": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
       "projectName": "Hiiops.Shop",
-      "projectPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
-      "packagesPath": "C:\\Users\\jtu\\.nuget\\packages\\",
-      "outputPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Shop\\obj\\",
+      "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\Hiiops.Shop.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Shop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jtu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9333,16 +9334,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
-              "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
+            "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+              "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
             },
-            "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
-              "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
+            "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+              "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
             }
           }
         }
@@ -9365,18 +9367,15 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.3.20216.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
