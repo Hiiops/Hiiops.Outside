@@ -22,39 +22,27 @@
         </div>
         <div style="background:#fff;">
           <div class="h5-desc">
-            <Divider>移动H5页面(此处是H5页面,可点击--功能未实现)</Divider>
+            <Divider>移动互联</Divider>
           </div>
-          <div class="home-app">
-            <div class="list">
-              <Cow></Cow>
-            </div>
-            <div class="list">
-              <Community></Community>
-            </div>
+          <div class="charts">
+              <div id="charts" style="height:360px;padding-bottom:0;" class="left"></div>
+              <div class="right">
+                <div class="title">活跃用户榜</div>
 
-            <div class="list">
-              <Question></Question>
-            </div>
-          </div>
-        </div>
-        <div class="charts">
-          <div id="charts" style="height:360px;padding-bottom:0;" class="left"></div>
-          <div class="right">
-            <div class="title">活跃用户榜</div>
+                <div class="user-item">
+                  <div v-for="(item,index) in cell" :key="index" class="cell">
+                    <div class="primary">
+                      <span :class="{top3:index<3,badge:index>=3}" class="badge-count">{{index+1}}</span>
+                      <Avatar :src="item.img" />
+                      <span class="name">{{item.name}}</span>
+                      <span class="desc">{{item.desc}}</span>
+                    </div>
 
-            <div class="user-item">
-              <div v-for="(item,index) in cell" :key="index" class="cell">
-                <div class="primary">
-                  <span :class="{top3:index<3,badge:index>=3}" class="badge-count">{{index+1}}</span>
-                  <Avatar :src="item.img" />
-                  <span class="name">{{item.name}}</span>
-                  <span class="desc">{{item.desc}}</span>
+                    <div>{{item.number}}</div>
+                  </div>
                 </div>
-
-                <div>{{item.number}}</div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </el-scrollbar>
@@ -62,56 +50,23 @@
 </template>
 <script>
 import Community from "@/../src/components/Community/index.vue";
-import Cow from "@/../src/components/Community/cow.vue";
-import Question from "@/../src/components/Community/question.vue";
+
 var echarts = require("echarts");
 
 export default {
-  components: { Community: Community, Cow: Cow, Question: Question },
+  components: { Community: Community },
   data() {
     return {
       n: 90,
       cell: [
         {
-          name: "小姐李好白",
+          name: "李白",
           img:
             "https://imgs-1256993465.cos.ap-chengdu.myqcloud.com/u%3D1407034680%2C1803900872%26fm%3D26%26gp%3D0.jpg",
           number: "342,766",
           desc: "趁着年轻你需要多受一些苦。不然....",
           slider: 90
-        },
-        {
-          name: "梦醒时分",
-          // img: require("@/assets/imgs/h5/02.jpg"),
-          img:
-            "https://imgs-1256993465.cos.ap-chengdu.myqcloud.com/u%3D2546115535%2C3321343280%26fm%3D26%26gp%3D0.jpg",
-          number: "438,12",
-          desc: "人没钱不如鬼,汤没盐不如水,你会慢慢发现...",
-          slider: 70
-        },
-        {
-          name: "生末净旦你",
-          img: require("@/assets/imgs/h5/03.jpg"),
-          number: "12,764",
-          desc: "我不能给你幸福，但可以给你舒服！",
-          slider: 45
-        },
-        {
-          name: "大爷",
-          img:
-            "https://imgs-1256993465.cos.ap-chengdu.myqcloud.com/u%3D2030158350%2C58383224%26fm%3D26%26gp%3D0.jpg",
-          number: "89,44",
-          desc: "师太！你就从了老衲吧！",
-          slider: 20
-        },
-        {
-          name: "哈哈....",
-          img:
-            "https://imgs-1256993465.cos.ap-chengdu.myqcloud.com/u%3D538930594%2C714478555%26fm%3D26%26gp%3D0.jpg",
-          number: "12,03",
-          desc: "我以为我颓废，原来我报废了！",
-          slider: 5
-        }
+        } 
       ],
       topColor: [
         {
