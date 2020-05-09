@@ -66,5 +66,33 @@ let viewgird = [
         path: '/Hiiops_Cart_Category',
         name: 'Hiiops_Cart_Category',
         component: () => import('@/views/cart/Hiiops_Cart_Category.vue')
+    }    ,{
+        path: '/Hiiops_Cart_System_Config',
+        name: 'Hiiops_Cart_System_Config',
+        component: () => import('@/views/cart/Hiiops_Cart_System_Config.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Banner',
+        name: 'Hiiops_Cart_Banner',
+        component: () => import('@/views/cart/Hiiops_Cart_Banner.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Seller_PV_Count',
+        name: 'Hiiops_Cart_Seller_PV_Count',
+        component: () => import('@/views/cart/Hiiops_Cart_Seller_PV_Count.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Seller_Collection',
+        name: 'Hiiops_Cart_Seller_Collection',
+        component: () => import('@/views/cart/Hiiops_Cart_Seller_Collection.vue')
+    }    ,{
+        path: '/Hiiops_Cart_SellerOrder',
+        name: 'Hiiops_Cart_SellerOrder',
+        component: () => import('@/views/cart/Hiiops_Cart_SellerOrder.vue')
+    }    ,{
+        path: '/Hiiops_Cart_SellerUser',
+        name: 'Hiiops_Cart_SellerUser',
+        component: () => import('@/views/cart/Hiiops_Cart_SellerUser.vue')
+    }    ,{
+        path: '/Hiiops_Cart_Coupon',
+        name: 'Hiiops_Cart_Coupon',
+        component: () => import('@/views/cart/Hiiops_Cart_Coupon.vue')
     }]
 export default viewgird
