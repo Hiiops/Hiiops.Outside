@@ -111,6 +111,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="关键字")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
+       [Editable(true)]
        public string Keywords { get; set; }
 
        /// <summary>

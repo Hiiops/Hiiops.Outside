@@ -5,7 +5,7 @@ let formFileds1 = {
     City: "",
     AvgPrice: 8.88,
     Date: "",
-    IsTop: "还没想好..."
+    IsTop: "中启汽车..."
 }
 let formRules1 = [
     //两列的表单，formRules数据格式为:[[{},{}]]

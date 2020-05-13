@@ -85,14 +85,14 @@ export default {
       type: Array,
       default: function() {
         return [
-          "source",
-          "|",
+          // "source",
+          // "|",
           "undo",
           "redo",
           "|",
           "preview",
-          "print",
-          "template",
+          // "print",
+          // "template",
           "code",
           "cut",
           "copy",
@@ -131,13 +131,13 @@ export default {
           "|",
           //   "image",
           //   "multiimage",
-          "flash",
+          // "flash",
           "media",
           "insertfile",
           "table",
           "hr",
           "emoticons",
-          "baidumap",
+          // "baidumap",
           "pagebreak",
           "anchor",
           "link",
@@ -151,7 +151,8 @@ export default {
     noDisableItems: {
       type: Array,
       default: function() {
-        return ["source", "fullscreen"];
+        //  return ["source", "fullscreen"];
+        return ["fullscreen"];
       }
     },
     filterMode: {
@@ -540,12 +541,11 @@ export default {
 };
 </script>
 
-<style>
+<style> 
 .ke-icon-vue-img {
   background-image: url(/../static/kindeditor/themes/default/default.png);
   background-position: 0px -496px;
   width: 16px;
-  height: 16px;
-  z-index: 9999999;
+  height: 16px; 
 }
 </style>

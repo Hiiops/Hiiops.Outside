@@ -1,249 +1,92 @@
 <template>
-  <div class="home-contianer">
-    <el-scrollbar style="height:100%;">
-      <div style>
-        <div data-v-542f4644 class="ivu-row" style="padding:15px;background: white;">
-          <div
-            v-for="item in topColor"
-            :key="item.name"
-            class="ivu-col ivu-col-span-6"
-            style="padding-left: 8px; padding-right: 8px;"
-          >
-            <div data-v-542f4644 class="ivu-card" :style="{background:item.background}">
-              <div class="icon-left">
-                <Icon :type="item.icon" />
-              </div>
-              <div class="ivu-card-body">
-                <div data-v-542f4644 class="demo-color-name">{{item.name}}</div>
-                <div data-v-542f4644 class="demo-color-desc">{{item.desc}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="background:#fff;">
-          <div class="h5-desc">
-            <Divider>移动互联</Divider>
-          </div>
-          <div class="charts">
-              <div id="charts" style="height:360px;padding-bottom:0;" class="left"></div>
-              <div class="right">
-                <div class="title">活跃用户榜</div>
-
-                <div class="user-item">
-                  <div v-for="(item,index) in cell" :key="index" class="cell">
-                    <div class="primary">
-                      <span :class="{top3:index<3,badge:index>=3}" class="badge-count">{{index+1}}</span>
-                      <Avatar :src="item.img" />
-                      <span class="name">{{item.name}}</span>
-                      <span class="desc">{{item.desc}}</span>
-                    </div>
-
-                    <div>{{item.number}}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
+  <div class="c-container">
+    <div class="item">
+      <div style="height:300px;" class="left">
+        <VolHeader icon="md-apps" text="浏览统计" style="margin-bottom: 5px;"></VolHeader>
+        <div style="height:258px;" :id="bar"></div>
       </div>
-    </el-scrollbar>
+      <div style="height:300px;" class="right">
+        <VolHeader icon="md-apps" text="快速查询" style="margin-bottom: 20px;"></VolHeader>
+        <VolForm style="padding-right: 35px;"
+                 ref="myform1"
+                 :loadKey="true"
+                 :formFileds="formFileds1"
+                 :formRules="formRules1"></VolForm>
+      </div>
+    </div>
+
+    <div class="item">
+      <div style="height:290px;" class="left">
+        <VolHeader icon="md-apps" text="数据汇总" style="margin-bottom: 20px;"></VolHeader>
+        <VolForm style="padding-left: 35px;"
+                 ref="myform1"
+                 :loadKey="true"
+                 :formFileds="formFileds2"
+                 :formRules="formRules2"></VolForm>
+      </div>
+      <div style="height:290px;" class="right">
+        <VolHeader icon="md-apps" text="用户分布" style="margin-bottom: 5px;"></VolHeader>
+        <div style="height:258px;" :id="pie"></div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import Community from "@/../src/components/Community/index.vue";
+  import VolHeader from "@/components/basic/VolHeader.vue";
+  import VolForm from "@/components/basic/VolForm.vue";
+  let echarts = require("echarts");
+  import options from "./charts/chartOptions";
+  import {
+    formFileds1,
+    formRules1,
+    formFileds2,
+    formRules2
+  } from "./charts/formOptions";
+  export default {
+    components: { VolForm, VolHeader },
+    data() {
+      return {
+        formFileds1: formFileds1,
+        formRules1: formRules1,
+        formFileds2: formFileds2,
+        formRules2: formRules2,
+        bar: "b-" + ~~(Math.random(10000, 100000) * 100000),
+        pie: "p-" + ~~(Math.random(10000, 100000) * 100000),
+        options: options
+      };
+    },
+    mounted() {
+      this.options.bar.title = {
+        subtext: "数据来自中启汽车小程序",
+        x: "center"
+      };
+      let $bar = echarts.init(document.getElementById(this.bar));
+      $bar.setOption(this.options.bar);
 
-var echarts = require("echarts");
-
-export default {
-  components: { Community: Community },
-  data() {
-    return {
-      n: 90,
-      cell: [
-        {
-          name: "李白",
-          img:
-            "https://imgs-1256993465.cos.ap-chengdu.myqcloud.com/u%3D1407034680%2C1803900872%26fm%3D26%26gp%3D0.jpg",
-          number: "342,766",
-          desc: "趁着年轻你需要多受一些苦。不然....",
-          slider: 90
-        } 
-      ],
-      topColor: [
-        {
-          name: "订单数",
-          desc: "#205",
-          background: "rgb(25, 190, 107)",
-          icon: "ios-home"
-        },
-        {
-          name: "支付数",
-          desc: "#412",
-          background: "rgb(45, 183, 245)",
-          icon: "ios-help-buoy"
-        },
-        {
-          name: "已取消",
-          desc: "#200",
-          background: "rgb(255, 153, 0)",
-          icon: "md-ionic"
-        },
-        {
-          name: "退货",
-          desc: "#12",
-          background: "rgb(237, 64, 20)",
-          icon: "ios-navigate"
-        }
-      ],
-      value1: "1"
-    };
-  },
-  mounted() {
-    var myChart = echarts.init(document.getElementById("charts"));
-    // 绘制图表
-    myChart.setOption({
-      color: ["#3398DB"],
-      title: {
-        left: "center",
-        text: "QQ交流群：还没想好..."
-      },
-      tooltip: {},
-      xAxis: {
-        data: ["商品", "数据", "订单", "消息", "标签", "异常", "审批", "取消"]
-      },
-      yAxis: {},
-      series: [
-        {
-          name: "数量",
-          type: "bar",
-          data: [5, 20, 36, 10, 10, 20, 15, 22]
-        }
-      ]
-    });
-  }
-};
+      this.options.pie.legend.top = 50;
+      this.options.pie.legend.right = 80;
+      this.options.pie.legend.orient = "vertical";
+      let $pie = echarts.init(document.getElementById(this.pie));
+      $pie.setOption(this.options.pie);
+    }
+  };
 </script>
-<style scoped>
-.home-contianer {
-  background: #efefef;
-  width: 100%;
-  height: 100%;
-  /* padding: 20px; */
-}
-.home-app {
-  display: inline-block;
-  /* display: -webkit-flex;
-  display: flex; */
-  padding: 15px;
-  padding-top: 5px;
-}
-.home-app > div {
-  float: left;
-  width: 33.33333%;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.ivu-card-body {
-  text-align: center;
-  padding: 25px 13px;
-  padding-left: 80px;
-}
-.demo-color-name {
-  color: #fff;
-  font-size: 16px;
-}
-.demo-color-desc {
-  color: #fff;
-  opacity: 0.7;
-}
-.ivu-card {
-  position: relative;
-}
-.ivu-card .icon-left {
-  border-right: 1px solid;
-  padding: 10px 24px;
-  height: 100%;
-  position: absolute;
-  font-size: 50px;
-  color: white;
-}
-.ivu-row {
-  border-bottom: 2px dotted #eee;
-  padding: 15px;
-  margin-bottom: 15px;
-}
+<style lang="less" scoped>
+  .c-container {
+    background: #f1f1f1;
+    padding: 10px;
+    .item
 
-.h5-desc {
-  padding-top: 10px;
-}
-</style>
-<style lang="less">
-.charts {
-  display: inline-block;
-  width: 100%;
-  margin-top: 20px;
-  // padding: 0px 24px;
-  .left {
-    padding: 25px;
-    background: white;
-    height: 360px;
-    width: 49%;
-    float: left;
-    margin-right: 1%;
-    background: white;
+  {
+    display: flex;
+    > div
+
+  {
+    flex: 1;
+    margin: 10px;
+    background: #fff;
   }
-  .right {
-    padding: 25px 45px;
-    background: white;
-    height: 360px;
-    width: 49%;
-    float: left;
-    margin-left: 1%;
-    .badge-count {
-      padding: 3px 7px;
-      position: relative;
-      border: 1px solid #eee;
-      border-radius: 50%;
 
-      margin-right: 11px;
-    }
-    .badge {
-      background: #e2e2e2;
-      color: #3a3535;
-    }
-    .top3 {
-      background: #2db7f5;
-      color: white;
-    }
-    .cell {
-      position: relative;
-      display: flex;
-      padding: 10px 0;
-      border-bottom: 1px dotted #eee;
-    }
-    .primary {
-      flex: 1;
-    }
-    .title {
-      font-size: 16px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 11px;
-    }
-    .name {
-      font-size: 15px;
-      position: relative;
-      top: 5px;
-      color: #303133;
-      left: 12px;
-    }
-    .desc {
-      margin-left: 27px;
-      font-size: 12px;
-      color: #b3b3b3;
-      position: relative;
-      top: 5px;
-    }
   }
-}
+  }
 </style>
-

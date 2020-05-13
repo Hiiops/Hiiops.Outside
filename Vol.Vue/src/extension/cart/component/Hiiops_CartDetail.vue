@@ -1,5 +1,5 @@
 <template>
-  <div class="v-kind">
+  <div class="v-kind" v-if="model==1">
     <div class="text">
       <label style="width: 100px;">车辆详情：</label>
     </div>
@@ -8,7 +8,7 @@
         ref="editor"
         :UploadImgUrl="uploadUrl"
         :content.sync="$store.getters.data().editor.currentRow.DetailContent"
-        height="360px"
+        height="360px"  
       ></kind-editor>
     </div>
   </div>
@@ -30,8 +30,11 @@ export default {
   },
   data() {
     return {
-      uploadUrl:'/api/app_news/upload'//上传图片保存的接口地址，可以自己写一个接口存储
+      uploadUrl:'/api/Hiiops_Cart/upload',//上传图片保存的接口地址，可以自己写一个接口存储
+      model:0,
+      
     //  content:"" //文本编辑器内容
+
     };
   }
 };
