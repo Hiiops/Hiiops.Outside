@@ -10,7 +10,7 @@ using VOL.Entity.DomainModels;
 
 namespace VOL.Core.Utilities
 {
-    public class JwtHelper
+    public partial class JwtHelper
     {
 
         /// <summary>

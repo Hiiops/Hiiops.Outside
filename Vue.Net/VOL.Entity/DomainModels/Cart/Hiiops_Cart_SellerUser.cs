@@ -60,24 +60,24 @@ namespace VOL.Entity.DomainModels
        ///电话
        /// </summary>
        [Display(Name ="电话")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(76)]
+       [Column(TypeName="nvarchar(76)")]
        public string Phone { get; set; }
 
        /// <summary>
        ///微信OPENID
        /// </summary>
        [Display(Name ="微信OPENID")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string OpenId { get; set; }
 
        /// <summary>
        ///昵称
        /// </summary>
        [Display(Name ="昵称")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string NickName { get; set; }
 
        /// <summary>
@@ -91,32 +91,32 @@ namespace VOL.Entity.DomainModels
        ///省份
        /// </summary>
        [Display(Name ="省份")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Province { get; set; }
 
        /// <summary>
        ///国家
        /// </summary>
        [Display(Name ="国家")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Country { get; set; }
 
        /// <summary>
        ///特权
        /// </summary>
        [Display(Name ="特权")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Privilege { get; set; }
 
        /// <summary>
        ///UNIONID
        /// </summary>
        [Display(Name ="UNIONID")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string UnionId { get; set; }
 
        /// <summary>
@@ -130,24 +130,24 @@ namespace VOL.Entity.DomainModels
        ///登录IP
        /// </summary>
        [Display(Name ="登录IP")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string LoginIp { get; set; }
 
        /// <summary>
        ///TOKEN
        /// </summary>
        [Display(Name ="TOKEN")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Token { get; set; }
 
        /// <summary>
        ///密码
        /// </summary>
        [Display(Name ="密码")]
-       [MaxLength(2)]
-       [Column(TypeName="nvarchar(2)")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
        public string Password { get; set; }
 
        /// <summary>
@@ -201,6 +201,14 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="修改时间")]
        [Column(TypeName="datetime")]
        public DateTime? ModifyDate { get; set; }
+
+       /// <summary>
+       ///账户
+       /// </summary>
+       [Display(Name ="账户")]
+       [MaxLength(510)]
+       [Column(TypeName="nvarchar(510)")]
+       public string Account { get; set; }
 
        
     }

@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Hiiops.Applet\Hiiops.Applet.csproj" />
     <ProjectReference Include="..\Hiiops.Cart\Hiiops.Cart.csproj" />
     <ProjectReference Include="..\Hiiops.Shop\Hiiops.Shop.csproj" />
     <ProjectReference Include="..\VOL.AppManager\VOL.AppManager.csproj" />
