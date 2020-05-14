@@ -12,3 +12,16 @@ H:\Github\Hiiops.Outside\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Ap
 H:\Github\Hiiops.Outside\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
 H:\Github\Hiiops.Outside\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.dll
 H:\Github\Hiiops.Outside\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.deps.json
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Core.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csprojAssemblyReference.cache
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.AssemblyInfoInputs.cache
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.AssemblyInfo.cs
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.pdb

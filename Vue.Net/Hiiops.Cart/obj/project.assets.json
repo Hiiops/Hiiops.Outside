@@ -9308,25 +9308,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\jtu\\.nuget\\packages\\": {},
     "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
+      "projectUniqueName": "F:\\cam\\github\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
       "projectName": "Hiiops.Cart",
-      "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\Hiiops.Cart\\obj\\",
+      "projectPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Cart\\Hiiops.Cart.csproj",
+      "packagesPath": "C:\\Users\\jtu\\.nuget\\packages\\",
+      "outputPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Cart\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jtu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9334,17 +9333,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
-              "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
+            "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+              "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
             },
-            "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
-              "projectPath": "H:\\Github\\Hiiops.Outside\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
+            "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+              "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
             }
           }
         }

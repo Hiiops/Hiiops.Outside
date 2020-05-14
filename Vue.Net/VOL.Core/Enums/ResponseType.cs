@@ -19,13 +19,14 @@ namespace VOL.Core.Enums
         SaveSuccess,
         AuditSuccess,
         OperSuccess,
-        RegisterSuccess,
+        RegisterSuccess, 
         ModifyPwdSuccess,
         EidtSuccess,
         DelSuccess,
         NoKey,
         NoKeyDel,
         KeyError,
-        Other
+        Other,
+        AccountExist=701
     }
 }
