@@ -1,17 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Vol.Vue",
-    "\\Vol.Vue\\src",
-    "\\Vol.Vue\\src\\extension",
-    "\\Vol.Vue\\src\\extension\\cart",
-    "\\Vol.Vue\\src\\extension\\cart\\component",
-    "\\Vol.Vue\\src\\views",
-    "\\Vol.Vue\\src\\views\\cart",
-    "\\Vue.Net\\VOL.Core\\BaseProvider",
-    "\\Vue.Net\\VOL.Core\\BaseProvider\\ServerMapPath",
+    "\\DB",
+    "\\DB\\sqlserver",
+    "\\Vue.Net",
     "\\Vue.Net\\VOL.WebApi"
   ],
-  "SelectedNode": "\\Vol.Vue\\src\\extension\\cart\\Hiiops_Cart.js",
+  "SelectedNode": "\\DB\\sqlserver",
   "PreviewInSolutionExplorer": false
 }

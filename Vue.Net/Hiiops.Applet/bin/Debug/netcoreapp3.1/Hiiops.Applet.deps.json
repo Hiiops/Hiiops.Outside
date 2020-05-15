@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v3.1": {
       "Hiiops.Applet/1.0.0": {
         "dependencies": {
-          "VOL.Core": "1.0.0"
+          "VOL.Core": "1.0.0",
+          "aliyun-net-sdk-core": "1.5.6"
         },
         "runtime": {
           "Hiiops.Applet.dll": {}
+        }
+      },
+      "aliyun-net-sdk-core/1.5.6": {
+        "runtime": {
+          "lib/netstandard2.0/aliyun-net-sdk-core.dll": {
+            "assemblyVersion": "1.5.6.0",
+            "fileVersion": "1.5.6.0"
+          }
         }
       },
       "Autofac/4.9.4": {
@@ -1829,6 +1838,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "aliyun-net-sdk-core/1.5.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xajhO8+9QsRoa3AmyfjYu1P0CfANHoyPjD6k6oPR3QcogexpaAPtlXPKWgjB3Nio0fWIH4wpbzDuqvGN5PgqdA==",
+      "path": "aliyun-net-sdk-core/1.5.6",
+      "hashPath": "aliyun-net-sdk-core.1.5.6.nupkg.sha512"
     },
     "Autofac/4.9.4": {
       "type": "package",

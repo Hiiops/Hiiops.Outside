@@ -25,3 +25,4 @@ F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.Assemb
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.dll
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CoreCompileInputs.cache
