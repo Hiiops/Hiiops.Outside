@@ -8,6 +8,9 @@ using VOL.Core.Utilities;
 
 namespace Hiiops.Applet
 {
+    /// <summary>
+    /// 微信网关
+    /// </summary>
     public class PorttalHandler : Handler
     {
         public WebResponseContent webResponseContent { get; private set; }

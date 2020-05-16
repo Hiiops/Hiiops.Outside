@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iviO1YJQY6sUifCtTUi+/uoW15VX50ZO6llvm7ZZNtQAbvAjvRMnTJdaDKHqBcs0EEAziWrToV56YR6wwRt8Rw==",
+  "dgSpecHash": "jaZmJs6YFt2Bx2bACA1XJoe8YU/Bze4ASrNJOjXGfZGoZ9gveldva8Sl68i4NRfQr8R1iZu9X6xIXvEvQ0WpCg==",
   "success": true,
   "projectFilePath": "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj",
   "expectedPackageFiles": [
@@ -189,8 +189,7 @@
     "C:\\Users\\jtu\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\jtu\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\jtu\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\jtu\\.nuget\\packages\\zkweb.system.drawing\\4.0.1\\zkweb.system.drawing.4.0.1.nupkg.sha512",
-    "C:\\Users\\jtu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\jtu\\.nuget\\packages\\zkweb.system.drawing\\4.0.1\\zkweb.system.drawing.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }

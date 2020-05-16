@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiiops.Shop", "Hiiops.Shop\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiiops.Cart", "Hiiops.Cart\Hiiops.Cart.csproj", "{7248171E-C409-4FD4-B607-66E757439CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiiops.Applet", "Hiiops.Applet\Hiiops.Applet.csproj", "{8D43CBE8-46DC-488B-8655-4C40D6AD48AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiiops.Applet", "Hiiops.Applet\Hiiops.Applet.csproj", "{8D43CBE8-46DC-488B-8655-4C40D6AD48AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DB",
-    "\\DB\\sqlserver",
-    "\\Vue.Net",
-    "\\Vue.Net\\VOL.WebApi"
+    "\\Vue.Net"
   ],
-  "SelectedNode": "\\DB\\sqlserver",
+  "SelectedNode": "\\Vue.Net\\VOL.sln",
   "PreviewInSolutionExplorer": false
 }
