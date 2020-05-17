@@ -14,20 +14,23 @@ namespace Hiiops.Applet.Services
     public class SMSService :BaseService, ISMSService, IDependency
     {
         /// <summary>
-        /// 发送验证码
+        ///  发送验证码
         /// </summary>
+        /// <param name="regionId">短信节点</param>
+        /// <param name="accessKeyId">APPID</param>
+        /// <param name="secret">secret</param>
         /// <param name="phone">手机号码</param>
         /// <param name="signName">短信签名</param>
         /// <param name="templateCode">短信模板ID</param>
         /// <param name="templateParam">短信模板变量对应的实际值，JSON格式</param>
         /// <param name="isvType">短信供应商(默认阿里云)</param>
         /// <returns></returns>
-        public WebResponseContent SendTemplateSms(string phone, string signName, string templateCode, string templateParam, IsvType isvType = IsvType.Aliyun)
+        public WebResponseContent SendTemplateSms(string regionId, string accessKeyId, string secret, string phone, string signName, string templateCode, string templateParam, IsvType isvType = IsvType.Aliyun)
         {
             switch (isvType)
             {
                 case IsvType.Aliyun:
-                    IClientProfile profile = DefaultProfile.GetProfile("cn-hangzhou", "", "");
+                    IClientProfile profile = DefaultProfile.GetProfile(regionId, accessKeyId, secret);
                     DefaultAcsClient client = new DefaultAcsClient(profile);
                     CommonRequest request = new CommonRequest();
                     request.Method = MethodType.POST;
@@ -39,7 +42,7 @@ namespace Hiiops.Applet.Services
                     request.AddQueryParameters("PhoneNumbers", phone);
                     request.AddQueryParameters("SignName", signName);//"广州悦发"
                     request.AddQueryParameters("TemplateCode", templateCode);//
-                    //request.AddQueryParameters("TemplateParam", "{ \"code \": \"" + content + "\" }");
+                   // request.AddQueryParameters("TemplateParam", "{ \"code \": \"" + 4544 + "\" }");
                     request.AddQueryParameters("TemplateParam", templateParam);//"TemplateParam", "{'code':'" + content + "'}"
                     // request.Protocol = ProtocolType.HTTP; 
                     CommonResponse response = client.GetCommonResponse(request);
@@ -49,7 +52,6 @@ namespace Hiiops.Applet.Services
                     if (_code == "OK")
                     {
                         
-
                         return new WebResponseContent().OK("发送成功");
                     }
                     else
@@ -96,7 +98,7 @@ namespace Hiiops.Applet.Services
         {
             throw new NotImplementedException();
         }
-
+       
         #region 发送短信异常信息
         /// <summary>
         /// 发送短信异常信息

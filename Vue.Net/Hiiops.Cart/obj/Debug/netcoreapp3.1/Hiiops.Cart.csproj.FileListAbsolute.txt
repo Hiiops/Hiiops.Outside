@@ -26,3 +26,17 @@ F:\cam\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
 F:\cam\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.csproj.CopyComplete
 F:\cam\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.dll
 F:\cam\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\Hiiops.Cart.deps.json
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\Hiiops.Cart.dll
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\Hiiops.Cart.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\VOL.Core.dll
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Cart\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.csprojAssemblyReference.cache
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.csproj.CoreCompileInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.AssemblyInfoInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.AssemblyInfo.cs
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.csproj.CopyComplete
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.dll
+H:\github20200516\github\Vue.Net\Hiiops.Cart\obj\Debug\netcoreapp3.1\Hiiops.Cart.pdb
