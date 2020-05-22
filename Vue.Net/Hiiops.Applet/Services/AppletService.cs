@@ -409,14 +409,6 @@ namespace Hiiops.Applet.Services
         public WebResponseContent ValidateSMSCode(string sessionKey, string code, string phone)
         {
             WebResponseContent webResponseContent = new WebResponseContent();
-            //if (code == null)
-            //    return webResponseContent.Error("验证码不能为空");
-            //string _code = CacheContext.Get<string>(sessionKey);
-            //if (_code == null)
-            //    return webResponseContent.Error("请先获取验证码");
-            //if (_code.Trim() != code.Trim())
-            //    return webResponseContent.Error("输入的验证码有误!");
-
             //取出短信配置参数
             string regionId, accessKeyId, secret;
             string signName, templateCode, templateParam;
@@ -424,10 +416,9 @@ namespace Hiiops.Applet.Services
             var _regionId = CacheContext.Get<string>(Constant.REGIONID);
             if (_regionId == null)
             {
-                var a = config.Where(x => x.KEYNAME == Constant.REGIONID).FirstOrDefault();
-                if (a == null || a.VAL == "")
+                regionId = config.Where(x => x.KEYNAME == Constant.REGIONID).FirstOrDefault().VAL;
+                if (regionId == null || regionId == "")
                     return webResponseContent.Error("阿里云短信节点配置有误");
-                regionId = a.VAL;
                 CacheContext.Add(Constant.REGIONID, regionId);
             }
             else
@@ -435,10 +426,9 @@ namespace Hiiops.Applet.Services
             var _accessKeyId = CacheContext.Get<string>(Constant.ACCESSKEYID);
             if (_accessKeyId == null)
             {
-                var a = config.Where(x => x.KEYNAME == Constant.ACCESSKEYID).FirstOrDefault();
-                if (a == null || a.VAL == "")
+                accessKeyId = config.Where(x => x.KEYNAME == Constant.ACCESSKEYID).FirstOrDefault().VAL;
+                if (accessKeyId == null || accessKeyId == "")
                     return webResponseContent.Error("阿里云短信配置有误");
-                accessKeyId = a.VAL;
                 CacheContext.Add(Constant.ACCESSKEYID, accessKeyId);
             }
             else
@@ -447,10 +437,9 @@ namespace Hiiops.Applet.Services
             var _secret = CacheContext.Get<string>(Constant.SECRET);
             if (_secret == null)
             {
-                 var a =  config.Where(x => x.KEYNAME == Constant.SECRET).FirstOrDefault();
-                if (a == null || a.VAL == "")
+                secret = config.Where(x => x.KEYNAME == Constant.SECRET).FirstOrDefault().VAL;
+                if (secret == null || secret == "")
                     return webResponseContent.Error("阿里云短信配置有误");
-                secret = a.VAL;
                 CacheContext.Add(Constant.SECRET, secret);
             }
             else
@@ -458,38 +447,38 @@ namespace Hiiops.Applet.Services
             var _signName = CacheContext.Get<string>(Constant.SIGNNAME);
             if (_signName == null)
             {
-                var a = config.Where(x => x.KEYNAME == Constant.SIGNNAME).FirstOrDefault();
-                if (a == null || a.VAL == "")
+                signName = config.Where(x => x.KEYNAME == Constant.SIGNNAME).FirstOrDefault().VAL;
+                if (signName == null || signName == "")
                     return webResponseContent.Error("阿里云短信配置有误");
-                signName = a.VAL;
                 CacheContext.Add(Constant.SIGNNAME, signName);
             }
             else
                 signName = _signName;
-            //SMS_139950069
-            var _templateCode = config.Where(x => x.KEYNAME == Constant.TEMPLATECODE && x.Remark.Contains("登录验证码")).FirstOrDefault();
-            if (_templateCode == null || _templateCode.VAL == "")
-                return webResponseContent.Error("阿里云短信配置有误");
-            templateCode = @_templateCode.VAL;
-
-            var _templateParam = config.Where(x => x.KEYNAME == Constant.TEMPLATEPARAM && x.Remark.Contains("登录验证码模板")).FirstOrDefault();
-            if (_templateParam == null || _templateParam.VAL == "")
+           
+            templateCode = config.Where(x => x.KEYNAME == Constant.TEMPLATECODE && x.Remark.Contains("登录验证码")).FirstOrDefault().VAL;
+            if (templateCode == null || templateCode == "")
                 return webResponseContent.Error("阿里云短信配置有误");
 
-            templateParam = @_templateParam.VAL.Replace("/", "\\").Replace("\\","");
 
-            
+            templateParam = config.Where(x => x.KEYNAME == Constant.TEMPLATEPARAM && x.Remark.Contains("登录验证码模板")).FirstOrDefault().VAL;
+            if (templateParam == null || templateParam == "")
+                return webResponseContent.Error("阿里云短信配置有误");
+
+            string _code = CacheContext.Get<string>(sessionKey);
+            if (_code == null)
+                return webResponseContent.Error("请先获取验证码");
+            if (_code != code)
+                return webResponseContent.Error("输入的验证码有误!");
 
             //组装一下数据
             Random rnd = new Random();
             int rand = rnd.Next(1000, 9999);
-            CacheContext.Add(phone + "ValidateSMSCode", ""+ rand , DateTime.Now.AddMinutes(10).GetTimeSpan());
-
-            return _smsservice.SendTemplateSms(regionId, accessKeyId,secret, phone, signName, templateCode, templateParam.Replace("$code$","T"+ rand).Replace(@"\\",""));
+            CacheContext.Add(phone + "ValidateSMSCode", rand + "", DateTime.Now.AddMinutes(10).GetTimeSpan());
+            return _smsservice.SendTemplateSms(phone, signName, templateCode, templateParam);
 
             //return new WebResponseContent().OK(message: "获取成功", data: new { img = $"data:image/jpeg;base64,{Convert.ToBase64String(data.ToArray())}", sessionKey = guid });
         }
-         
+
 
         /// <summary>
         /// 找回密码
@@ -524,37 +513,6 @@ namespace Hiiops.Applet.Services
             if (DbContext.SaveChanges() > 0)
                 return webResponseContent.OK("密码修改成功", data: new { token = seller.Token });
             return webResponseContent.Error("密码修改失败");
-        }
-        /// <summary>
-        /// 微信小程序获取手机号码
-        /// </summary>
-        /// <param name="session_key">code</param>
-        /// <param name="encryptedData">encryptedData</param>
-        /// <param name="iv">iv</param>
-        /// <returns></returns> 
-        public async Task<WebResponseContent> GetPhone(string session_key, string encryptedData, string iv)
-        {
-            if (string.IsNullOrWhiteSpace(session_key) ||
-                string.IsNullOrWhiteSpace(encryptedData) ||
-                string.IsNullOrWhiteSpace(iv))
-            {
-                return new WebResponseContent().Error("参数有误");
-            }
-            //解密获取手机号
-            string strJm = AESEncrypt.Decrypt(encryptedData, session_key, iv);
-            if (string.IsNullOrWhiteSpace(strJm))
-            {
-                return new WebResponseContent().Error("认证解密失败");
-            }
-            dynamic data = new System.Dynamic.ExpandoObject();
-            await Task.Run(() =>
-            {
-                JObject jsonUser = JObject.Parse(strJm);
-                string phone = jsonUser["phoneNumber"].ToString(); 
-                data.phone = phone;//手机号 
-              
-            });
-            return new WebResponseContent().OK("发送成功", data);
         }
 
     }

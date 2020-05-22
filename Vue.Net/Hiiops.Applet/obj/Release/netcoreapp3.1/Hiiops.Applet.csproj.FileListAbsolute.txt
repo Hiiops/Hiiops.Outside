@@ -1,0 +1,14 @@
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\Hiiops.Applet.deps.json
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\Hiiops.Applet.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\Hiiops.Applet.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\VOL.Core.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\VOL.Entity.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\VOL.Core.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\bin\Release\netcoreapp3.1\VOL.Entity.pdb
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.csprojAssemblyReference.cache
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.csproj.CoreCompileInputs.cache
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.AssemblyInfoInputs.cache
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.AssemblyInfo.cs
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.dll
+F:\cam\github\Vue.Net\Hiiops.Applet\obj\Release\netcoreapp3.1\Hiiops.Applet.pdb

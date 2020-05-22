@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "H:\\github20200516\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj": {}
+    "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj": {}
   },
   "projects": {
-    "H:\\github20200516\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj": {
+    "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\github20200516\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj",
+        "projectUniqueName": "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj",
         "projectName": "Hiiops.Applet",
-        "projectPath": "H:\\github20200516\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "H:\\github20200516\\github\\Vue.Net\\Hiiops.Applet\\obj\\",
+        "projectPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\Hiiops.Applet.csproj",
+        "packagesPath": "C:\\Users\\jtu\\.nuget\\packages\\",
+        "outputPath": "F:\\cam\\github\\Vue.Net\\Hiiops.Applet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jtu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,14 +27,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
-                "projectPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
+              "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+                "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
               }
             }
           }
@@ -63,34 +62,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.3.20216.6\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+    "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
+        "projectUniqueName": "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
         "projectName": "VOL.Core",
-        "projectPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Core\\obj\\",
+        "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
+        "packagesPath": "C:\\Users\\jtu\\.nuget\\packages\\",
+        "outputPath": "F:\\cam\\github\\Vue.Net\\VOL.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jtu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,14 +100,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
-                "projectPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
+              "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+                "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
               }
             }
           }
@@ -194,6 +195,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -202,26 +209,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.3.20216.6\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+    "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
+        "projectUniqueName": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
         "projectName": "VOL.Entity",
-        "projectPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "H:\\github20200516\\github\\Vue.Net\\VOL.Entity\\obj\\",
+        "projectPath": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
+        "packagesPath": "C:\\Users\\jtu\\.nuget\\packages\\",
+        "outputPath": "F:\\cam\\github\\Vue.Net\\VOL.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jtu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\ServiceFabricSDK.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -229,7 +236,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Microsoft SDKs\\Service Fabric\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -269,6 +275,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -277,7 +289,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.3.20216.6\\RuntimeIdentifierGraph.json"
         }
       }
     }

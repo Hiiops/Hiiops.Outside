@@ -11,9 +11,10 @@ namespace Hiiops.Applet.IServices
     public interface IAppletLoginService : VOL.Core.BaseInterface.IServices
     {
         /// <summary>
-        /// 注册
+        /// 小程序注册接口
         /// </summary>
-        /// <param name="hiiops_Cart_SellerUser"></param>
+        /// <param name="loginInfo"></param>
+        /// <param name="verificationCode"></param>
         /// <returns></returns>
 
         Task<WebResponseContent> Resign(Hiiops_Cart_SellerUser hiiops_Cart_SellerUser);
@@ -51,7 +52,7 @@ namespace Hiiops.Applet.IServices
         /// <param name="verificationCode">验证码</param>
         /// <returns></returns>
         Task<WebResponseContent> ModifyPwd(string oldPwd, string newPwd, string verificationCode);
-
+        
         /// <summary>
         /// 修改密码
         /// </summary>
@@ -92,14 +93,7 @@ namespace Hiiops.Applet.IServices
         /// <returns></returns>
         WebResponseContent FindPassword(string phone, string code, string sessionKey, string newPassWord, string againPassWord);
 
-        /// <summary>
-        /// 微信小程序获取手机号码
-        /// </summary>
-        /// <param name="session_key">code</param>
-        /// <param name="encryptedData">encryptedData</param>
-        /// <param name="iv">iv</param>
-        /// <returns></returns>
-        Task<WebResponseContent> GetPhone(string session_key, string encryptedData, string iv);
+
 
     }
 }

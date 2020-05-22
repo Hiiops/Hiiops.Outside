@@ -16,7 +16,7 @@ import documents from './documents'
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
+  history: true,
   routes: [
     ...exampleRouter,
     ...h5,
