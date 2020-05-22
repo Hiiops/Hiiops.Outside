@@ -29,6 +29,30 @@ namespace Hiiops.Cart.Controllers
         {
             return Json(await service.Login(loginInfo));
         }
+
+        /// <summary>
+        /// 登录接口
+        /// </summary>
+        /// <param name="loginInfo"></param>
+        /// <returns></returns>
+        [HttpPost, HttpGet, Route("getToken"), AllowAnonymous] 
+        public async Task<IActionResult> Login(string code)
+        {
+            return Json(await service.Login(code));
+        }
+        /// <summary>
+        /// 登录接口
+        /// </summary>
+        /// <param name="loginInfo"></param>
+        /// <returns></returns>
+        [HttpPost, HttpGet, Route("getToken"), AllowAnonymous]
+        [ObjectModelValidatorFilter(ValidatorModel.Login)]
+        public async Task<IActionResult> Login(string code,string phone)
+        {
+            return Json(await service.Login(code,phone));
+        }
+
+
         [HttpPost, HttpGet, Route("resign"), AllowAnonymous]
         /// <summary>
         /// 注册接口
@@ -68,6 +92,14 @@ namespace Hiiops.Cart.Controllers
         public IActionResult ValidateCode()
         {
             return Json(service.ValidateCode());
+        }
+        /// <summary>
+        /// 获取验证码
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult ValidateSMSCode(string sessionKey, string code, string phone)
+        {
+            return Json(service.ValidateSMSCode(sessionKey, code, phone));
         }
 
     }

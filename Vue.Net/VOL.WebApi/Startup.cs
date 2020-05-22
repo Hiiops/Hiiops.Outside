@@ -190,7 +190,7 @@ namespace VOL.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "VOL.Core后台Api");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "后台Api");
             });
             app.UseRouting();
             //UseCors,UseAuthenticationg两个位置的顺序很重要 

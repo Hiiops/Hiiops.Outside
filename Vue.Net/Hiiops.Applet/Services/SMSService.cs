@@ -27,7 +27,7 @@ namespace Hiiops.Applet.Services
             switch (isvType)
             {
                 case IsvType.Aliyun:
-                    IClientProfile profile = DefaultProfile.GetProfile("cn-hangzhou", "", "");
+                    IClientProfile profile = DefaultProfile.GetProfile("", "", "");
                     DefaultAcsClient client = new DefaultAcsClient(profile);
                     CommonRequest request = new CommonRequest();
                     request.Method = MethodType.POST;
@@ -49,7 +49,6 @@ namespace Hiiops.Applet.Services
                     if (_code == "OK")
                     {
                         
-
                         return new WebResponseContent().OK("发送成功");
                     }
                     else

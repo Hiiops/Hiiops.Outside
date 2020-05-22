@@ -158,5 +158,30 @@
         /// 个推mastersecret
         /// </summary>
         public const string GETUIMASTERSECRET = "GeTuiMasterSecret";
+         
+        /// <summary>
+        /// 阿里云短信节点
+        /// </summary>
+        public const string REGIONID = "aliyun_regionId";
+        /// <summary>
+        /// 阿里云短信appid
+        /// </summary>
+        public const string ACCESSKEYID = "aliyun_accessKeyId";
+        /// <summary>
+        /// 阿里云短信secret
+        /// </summary>
+        public const string SECRET = "aliyun_secret";
+        /// <summary>
+        /// 阿里云短信签名
+        /// </summary>
+        public const string SIGNNAME = "aliyun_signName";
+        /// <summary>
+        /// 阿里云短信模板CODE
+        /// </summary>
+        public const string TEMPLATECODE = "aliyun_templateCode";
+        /// <summary>
+        /// 阿里云短信模板参数
+        /// </summary>
+        public const string TEMPLATEPARAM = "aliyun_templateParam";
     }
 }

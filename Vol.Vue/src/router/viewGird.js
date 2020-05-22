@@ -94,5 +94,97 @@ let viewgird = [
         path: '/Hiiops_Cart_Coupon',
         name: 'Hiiops_Cart_Coupon',
         component: () => import('@/views/cart/Hiiops_Cart_Coupon.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Product',
+        name: 'Hiiops_Shop_Store_Product',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Product.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Category',
+        name: 'Hiiops_Shop_Store_Category',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Category.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Product_Reply',
+        name: 'Hiiops_Shop_Store_Product_Reply',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Product_Reply.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Product_Attr',
+        name: 'Hiiops_Shop_Store_Product_Attr',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Product_Attr.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Order',
+        name: 'Hiiops_Shop_Store_Order',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Order.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User',
+        name: 'Hiiops_Shop_User',
+        component: () => import('@/views/shop/Hiiops_Shop_User.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Level',
+        name: 'Hiiops_Shop_User_Level',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Level.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Group',
+        name: 'Hiiops_Shop_User_Group',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Group.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Label',
+        name: 'Hiiops_Shop_User_Label',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Label.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Extract',
+        name: 'Hiiops_Shop_User_Extract',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Extract.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Recharge',
+        name: 'Hiiops_Shop_User_Recharge',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Recharge.vue')
+    }    ,{
+        path: '/Hiiops_Shop_User_Bill',
+        name: 'Hiiops_Shop_User_Bill',
+        component: () => import('@/views/shop/Hiiops_Shop_User_Bill.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Coupon',
+        name: 'Hiiops_Shop_Store_Coupon',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Coupon.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Coupon_Issue',
+        name: 'Hiiops_Shop_Store_Coupon_Issue',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Coupon_Issue.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Coupon_Issue_User',
+        name: 'Hiiops_Shop_Store_Coupon_Issue_User',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Coupon_Issue_User.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Bargain',
+        name: 'Hiiops_Shop_Store_Bargain',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Bargain.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Combination',
+        name: 'Hiiops_Shop_Store_Combination',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Combination.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Pink',
+        name: 'Hiiops_Shop_Store_Pink',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Pink.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Seckill',
+        name: 'Hiiops_Shop_Store_Seckill',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Seckill.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Article',
+        name: 'Hiiops_Shop_Article',
+        component: () => import('@/views/shop/Hiiops_Shop_Article.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Article_Category',
+        name: 'Hiiops_Shop_Article_Category',
+        component: () => import('@/views/shop/Hiiops_Shop_Article_Category.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Article_Content',
+        name: 'Hiiops_Shop_Article_Content',
+        component: () => import('@/views/shop/Hiiops_Shop_Article_Content.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Store_Service',
+        name: 'Hiiops_Shop_Store_Service',
+        component: () => import('@/views/shop/Hiiops_Shop_Store_Service.vue')
     }]
 export default viewgird

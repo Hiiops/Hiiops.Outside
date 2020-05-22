@@ -1,17 +1,20 @@
 ﻿using DotNet.Utilities;
 using Hiiops.Applet.IServices;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using VOL.Core.BaseProvider;
 using VOL.Core.Configuration;
+using VOL.Core.Const;
 using VOL.Core.Enums;
 using VOL.Core.Extensions;
 using VOL.Core.Extensions.AutofacManager;
 using VOL.Core.Services;
 using VOL.Core.UserManager;
 using VOL.Core.Utilities;
+using VOL.Core.Utilities.WeChat;
 using VOL.Entity.DomainModels;
 using VOL.Entity.DomainModels.Cart;
 
@@ -19,9 +22,10 @@ namespace Hiiops.Applet.Services
 {
     public class AppletService : BaseService, IAppletLoginService, IDependency
     {
-        public AppletService()
+        private SMSService _smsservice;
+        public AppletService(SMSService smsservice)
         {
-
+            _smsservice = smsservice;
         }
         public static IAppletLoginService Instance
         {
@@ -41,18 +45,15 @@ namespace Hiiops.Applet.Services
             WebResponseContent responseContent = new WebResponseContent();
             try
             {
-
                 var db = DbContext.Set<Hiiops_Cart_SellerUser>();
                 var user = await db.Where(x => x.Phone == loginInfo.UserName ||
                 x.OpenId == loginInfo.UserName || x.Account == loginInfo.UserName).FirstOrDefaultAsync();
                 if (user == null || loginInfo.PassWord.Trim() != (user.Password ?? "").DecryptDES(AppSetting.Secret.User))
                     return responseContent.Error(ResponseType.LoginError);
-
                 string token = JwtHelper.IssueJwt(user.Id.ToString());
                 user.Token = token;
                 responseContent.Data = new { token, user.NickName, user.Phone, user.Account, user.Country, user.HeadImgUrl, user.Id, user.Name, user.Privilege, user.Province, user.Remark, user.SearchKey, user.Sex, user.Status };
                 db.Update(user);
-
                 SellerContent.Current.LogOut(user.Id);
 
                 loginInfo.PassWord = string.Empty;
@@ -68,6 +69,85 @@ namespace Hiiops.Applet.Services
             {
                 Logger.Info(LoggerType.Login, loginInfo.Serialize(), responseContent.Message, msg);
             }
+        }
+
+        /// <summary>
+        /// 小程序-通过OpenId快捷登录
+        /// </summary>
+        /// <param name="code">微信临时code</param> 
+        /// <returns></returns>
+        public async Task<WebResponseContent> Login(string code)
+        {
+            WebResponseContent responseContent = new WebResponseContent();
+            WxUtils _wxUtils = new WxUtils();
+            //取出appid和secret
+            var config = DbContext.Set<Hiiops_Cart_System_Config>().Where(x => x.KEYNAME == Constant.WECHATAPPID || x.KEYNAME == Constant.WECHATAPPSECRET).ToList();
+            if (config.Count < 2)
+                return responseContent.Error("请先配置小程序参数");
+
+            var appid = CacheContext.Get<string>(Constant.WECHATAPPID);
+            string applet_appid = "";
+            string applet_secret = "";
+            if (appid == null)
+            {
+                applet_appid = config.Where(x => x.KEYNAME == Constant.WECHATAPPID).FirstOrDefault().VAL;
+                CacheContext.Add(Constant.WECHATAPPID, applet_appid);
+            }
+            else
+                applet_appid = appid;
+            var secret = CacheContext.Get<string>(Constant.WECHATAPPSECRET);
+            if (secret == null)
+            {
+                applet_secret = config.Where(x => x.KEYNAME == Constant.WECHATAPPSECRET).FirstOrDefault().VAL;
+                CacheContext.Add(Constant.WECHATAPPSECRET, applet_secret);
+            }
+            else
+                applet_secret = secret;
+
+            //通过code取openid
+            string jsonStr = _wxUtils.GetXcxKey(code, applet_appid, applet_secret);
+            JObject json = JObject.Parse(jsonStr);
+            string openid = json["openid"].ToString();
+            if (string.IsNullOrWhiteSpace(openid))
+            {
+                return responseContent.Error("服务繁忙，请重试！");
+            }
+            //通过openid判断系统是否存在当前微信用户
+            var user = await DbContext.Set<Hiiops_Cart_SellerUser>().Where(x => x.OpenId == openid).FirstOrDefaultAsync();
+            if (user == null)
+                return responseContent.Error("第一次使用请先注册!");
+            string token = JwtHelper.IssueJwt(user.Id.ToString());
+            user.Token = token;
+            responseContent.Data = new { token, user.NickName, user.Phone, user.Account, user.Country, user.HeadImgUrl, user.Id, user.Name, user.Privilege, user.Province, user.Remark, user.SearchKey, user.Sex, user.Status };
+            DbContext.Update(user);
+            SellerContent.Current.LogOut(user.Id);
+            return responseContent.OK(ResponseType.LoginSuccess);
+
+        }
+        /// <summary>
+        /// 手机号快捷登录
+        /// </summary>
+        /// <param name="code">验证码</param> 
+        /// <param name="phone">手机号码</param> 
+        /// <returns></returns>
+        public async Task<WebResponseContent> Login(string code, string phone)
+        {
+            WebResponseContent responseContent = new WebResponseContent();
+            string _code = CacheContext.Get<string>(phone + "ValidateSMSCode");
+            if (_code == null)
+                return responseContent.Error("请先获取短信验证码");
+            if (_code != code)
+                return responseContent.Error("验证码有误");
+            var user = await DbContext.Set<Hiiops_Cart_SellerUser>().Where(x => x.Phone == phone).FirstOrDefaultAsync();
+            if (user == null)
+                return responseContent.Error("手机未注册");
+            string token = JwtHelper.IssueJwt(user.Id.ToString());
+            user.Token = token;
+            responseContent.Data = new { token, user.NickName, user.Phone, user.Account, user.Country, user.HeadImgUrl, user.Id, user.Name, user.Privilege, user.Province, user.Remark, user.SearchKey, user.Sex, user.Status };
+            DbContext.Update(user);
+            SellerContent.Current.LogOut(user.Id);
+            return responseContent.OK(ResponseType.LoginSuccess);
+
         }
 
         /// <summary>
@@ -178,6 +258,76 @@ namespace Hiiops.Applet.Services
             }
             return webResponse;
         }
+
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <param name="phone">手机号</param>
+        /// <param name="newPwd">新密码</param>
+        /// <param name="verificationCode">验证码</param>
+        /// <param name="code">短信验证码</param>
+        /// <param name="sessionKey">获取图片验证码的ID</param>
+        /// <returns></returns> 
+        public async Task<WebResponseContent> ModifyPwd(string phone, string newPwd, string verificationCode, string code, string sessionKey)
+        {
+            newPwd = newPwd?.Trim();
+            string message = "";
+            WebResponseContent webResponse = new WebResponseContent();
+            try
+            {
+                if (string.IsNullOrEmpty(phone)) return webResponse.Error("手机号不能为空");
+                if (string.IsNullOrEmpty(newPwd)) return webResponse.Error("新密码不能为空");
+                if (string.IsNullOrEmpty(verificationCode)) return webResponse.Error("验证码不能为空");
+                if (string.IsNullOrEmpty(code)) return webResponse.Error("短信验证码有误");
+                if (string.IsNullOrEmpty(sessionKey)) return webResponse.Error("参数有误");
+
+                if (newPwd.Length < 6) return webResponse.Error("密码不能少于6位");
+
+
+                string imgCode = CacheContext.Get<string>(sessionKey);
+                if (imgCode == null || imgCode != verificationCode)
+                    if (string.IsNullOrEmpty(verificationCode)) return webResponse.Error("请输入正确验证码");
+
+
+                string phoneCode = CacheContext.Get<string>(phone + "ValidateSMSCode");
+                if (phoneCode == null || phoneCode != code)
+                    return webResponse.Error("短信验证码有误");
+
+                var a = await DbContext.Set<Hiiops_Cart_SellerUser>().Where(x => x.Phone == phone).FirstOrDefaultAsync();
+                string userCurrentPwd = a.Password;
+
+
+                string _newPwd = newPwd.EncryptDES(AppSetting.Secret.User);
+                if (userCurrentPwd == _newPwd) return webResponse.Error("新密码不能与旧密码相同");
+
+                await Task.Run(() =>
+                {
+                    DbContext.Database.ExecuteSqlRaw($"UPDATA Hiiops_Cart_SellerUser SET Password = '{_newPwd}' , ModifyDate = '{DateTime.Now}'");
+
+                });
+
+                webResponse.OK("密码修改成功");
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                webResponse.Error("服务器了点问题,请稍后再试");
+            }
+            finally
+            {
+                if (message == "")
+                {
+                    Logger.OK(LoggerType.ApiModifyPwd, "密码修改成功");
+                }
+                else
+                {
+                    Logger.Error(LoggerType.ApiModifyPwd, message);
+                }
+            }
+            return webResponse;
+        }
+
+
         /// <summary>
         /// 个人中心获取当前用户信息
         /// </summary>
@@ -256,12 +406,77 @@ namespace Hiiops.Applet.Services
         /// </summary>
         /// <param name="guid"></param>
         /// <returns></returns>
-        public WebResponseContent ValidateSMSCode()
+        public WebResponseContent ValidateSMSCode(string sessionKey, string code, string phone)
         {
-            var data = VierificationCodeServices.Create(out string code, 4);//获取4位验证码并生图片
-            string guid = Guid.NewGuid().ToString();
-            CacheContext.Add(guid, code, expiresIn: DateTime.Now.AddMinutes(10).GetTimeSpan());//10分钟有效
-            return new WebResponseContent().OK(message: "获取成功", data: new { img = $"data:image/jpeg;base64,{Convert.ToBase64String(data.ToArray())}", sessionKey = guid });
+            WebResponseContent webResponseContent = new WebResponseContent();
+            //取出短信配置参数
+            string regionId, accessKeyId, secret;
+            string signName, templateCode, templateParam;
+            var config = DbContext.Set<Hiiops_Cart_System_Config>();
+            var _regionId = CacheContext.Get<string>(Constant.REGIONID);
+            if (_regionId == null)
+            {
+                regionId = config.Where(x => x.KEYNAME == Constant.REGIONID).FirstOrDefault().VAL;
+                if (regionId == null || regionId == "")
+                    return webResponseContent.Error("阿里云短信节点配置有误");
+                CacheContext.Add(Constant.REGIONID, regionId);
+            }
+            else
+                regionId = _regionId;
+            var _accessKeyId = CacheContext.Get<string>(Constant.ACCESSKEYID);
+            if (_accessKeyId == null)
+            {
+                accessKeyId = config.Where(x => x.KEYNAME == Constant.ACCESSKEYID).FirstOrDefault().VAL;
+                if (accessKeyId == null || accessKeyId == "")
+                    return webResponseContent.Error("阿里云短信配置有误");
+                CacheContext.Add(Constant.ACCESSKEYID, accessKeyId);
+            }
+            else
+                accessKeyId = _accessKeyId;
+
+            var _secret = CacheContext.Get<string>(Constant.SECRET);
+            if (_secret == null)
+            {
+                secret = config.Where(x => x.KEYNAME == Constant.SECRET).FirstOrDefault().VAL;
+                if (secret == null || secret == "")
+                    return webResponseContent.Error("阿里云短信配置有误");
+                CacheContext.Add(Constant.SECRET, secret);
+            }
+            else
+                secret = _secret;
+            var _signName = CacheContext.Get<string>(Constant.SIGNNAME);
+            if (_signName == null)
+            {
+                signName = config.Where(x => x.KEYNAME == Constant.SIGNNAME).FirstOrDefault().VAL;
+                if (signName == null || signName == "")
+                    return webResponseContent.Error("阿里云短信配置有误");
+                CacheContext.Add(Constant.SIGNNAME, signName);
+            }
+            else
+                signName = _signName;
+           
+            templateCode = config.Where(x => x.KEYNAME == Constant.TEMPLATECODE && x.Remark.Contains("登录验证码")).FirstOrDefault().VAL;
+            if (templateCode == null || templateCode == "")
+                return webResponseContent.Error("阿里云短信配置有误");
+
+
+            templateParam = config.Where(x => x.KEYNAME == Constant.TEMPLATEPARAM && x.Remark.Contains("登录验证码模板")).FirstOrDefault().VAL;
+            if (templateParam == null || templateParam == "")
+                return webResponseContent.Error("阿里云短信配置有误");
+
+            string _code = CacheContext.Get<string>(sessionKey);
+            if (_code == null)
+                return webResponseContent.Error("请先获取验证码");
+            if (_code != code)
+                return webResponseContent.Error("输入的验证码有误!");
+
+            //组装一下数据
+            Random rnd = new Random();
+            int rand = rnd.Next(1000, 9999);
+            CacheContext.Add(phone + "ValidateSMSCode", rand + "", DateTime.Now.AddMinutes(10).GetTimeSpan());
+            return _smsservice.SendTemplateSms(phone, signName, templateCode, templateParam);
+
+            //return new WebResponseContent().OK(message: "获取成功", data: new { img = $"data:image/jpeg;base64,{Convert.ToBase64String(data.ToArray())}", sessionKey = guid });
         }
 
 

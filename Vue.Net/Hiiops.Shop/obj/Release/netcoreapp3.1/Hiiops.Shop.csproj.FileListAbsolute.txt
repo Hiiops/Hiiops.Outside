@@ -1,0 +1,14 @@
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.deps.json
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.dll
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.pdb
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Core.dll
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Entity.dll
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Core.pdb
+F:\cam\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Entity.pdb
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csprojAssemblyReference.cache
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csproj.CoreCompileInputs.cache
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.AssemblyInfoInputs.cache
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.AssemblyInfo.cs
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csproj.CopyComplete
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.dll
+F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.pdb

@@ -14,15 +14,14 @@ namespace Hiiops.Applet.Services
 
     public class HandelActionService : BaseService, IHandelAction, IDependency
     {
-        private ActionCollection actionList;
+        private ActionCollection actionList = new ActionCollection();
         public HandelActionService()
         {
-
         }
         public static IHandelAction Instance
         {
             get { return AutofacContainerModule.GetService<IHandelAction>(); }
-        } 
+        }
         public void DoAction(HttpContext context)
         {
             var action = context.Request.Query["action"];

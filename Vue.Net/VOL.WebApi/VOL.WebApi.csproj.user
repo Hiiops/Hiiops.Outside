@@ -5,7 +5,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <ActiveDebugProfile>VOL.WebApi</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>win64</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

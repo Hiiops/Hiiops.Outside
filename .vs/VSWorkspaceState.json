@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Vue.Net"
+    "\\Vol.Vue\\src",
+    "\\Vol.Vue\\src\\api",
+    "\\Vol.Vue\\src\\router",
+    "\\Vol.Vue\\src\\views",
+    "\\Vue.Net",
+    "\\Vue.Net\\Hiiops.Applet",
+    "\\Vue.Net\\Hiiops.Applet\\IServices",
+    "\\Vue.Net\\Hiiops.Applet\\Services"
   ],
-  "SelectedNode": "\\Vue.Net\\VOL.sln",
+  "SelectedNode": "\\Vue.Net\\Hiiops.Applet\\Services\\AppletService.cs",
   "PreviewInSolutionExplorer": false
 }
