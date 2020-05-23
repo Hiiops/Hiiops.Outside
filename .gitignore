@@ -1,3 +1,6 @@
+/Vue.Net/Hiiops.Applet/bin
+/Vue.Net/Hiiops.Cart/bin
+/Vue.Net/Hiiops.Shop/bin
 /Vol.Vue/node_modules
 /Vue.Net/VOL.Web/bin
 /Vue.Net/VOL.WebApi/bin
@@ -22,4 +25,5 @@
 /Vue.Net/VOL.WebApi/Download/*
 /Vol.Vue/dist
 /Vue.Net/VOL.WebApi/wwwroot/Upload/
+/Vue.Net/VOL.WebApi/appsettings.json
 /Vue.Net/VOL.Web

@@ -20,7 +20,7 @@
 
 <script>
     import extend from "@/extension/shop/Hiiops_Shop_Store_Product.js";
-    import ViewGrid from "@/components/basic/ViewGrid.vue";
+    import ViewGrid from "@/components/basic/ViewGridProduct.vue";
     var vueParam = {
         components: {
             ViewGrid
