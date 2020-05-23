@@ -3,7 +3,7 @@
     <!-- <div class="log-bg"></div> -->
     <div class="login-contianer">
       <div class="login-project"> 
-        <span class="desc">业务开发系统</span>
+        <span class="desc">Hiiops PSaas shop </span>
       </div>
       <div class="login-form">
         <Menu mode="horizontal" style="margin-bottom: 30px;" active-name="1">

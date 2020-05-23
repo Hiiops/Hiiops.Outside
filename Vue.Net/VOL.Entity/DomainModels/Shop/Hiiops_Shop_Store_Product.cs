@@ -26,9 +26,9 @@ namespace VOL.Entity.DomainModels
        public int Id { get; set; }
 
        /// <summary>
-       ///商户Id(0为总后台管理员创建,不为0的时候是商户后台创建)
+       ///商户Id
        /// </summary>
-       [Display(Name ="商户Id(0为总后台管理员创建,不为0的时候是商户后台创建)")]
+       [Display(Name ="商户Id")]
        [Column(TypeName="int")]
        [Required(AllowEmptyStrings=false)]
        public int Mer_Id { get; set; }
@@ -39,6 +39,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品图片")]
        [MaxLength(512)]
        [Column(TypeName="nvarchar(512)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Image { get; set; }
 
@@ -48,6 +49,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="轮播图")]
        [MaxLength(4000)]
        [Column(TypeName="nvarchar(4000)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string SlIder_Image { get; set; }
 
@@ -57,6 +59,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品名称")]
        [MaxLength(256)]
        [Column(TypeName="nvarchar(256)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Store_Name { get; set; }
 
@@ -66,6 +69,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品简介")]
        [MaxLength(512)]
        [Column(TypeName="nvarchar(512)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Store_Info { get; set; }
 
@@ -75,6 +79,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="关键字")]
        [MaxLength(512)]
        [Column(TypeName="nvarchar(512)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Keyword { get; set; }
 
@@ -84,6 +89,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品条码（一维码）")]
        [MaxLength(30)]
        [Column(TypeName="nvarchar(30)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Bar_Code { get; set; }
 
@@ -93,6 +99,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="分类Id")]
        [MaxLength(128)]
        [Column(TypeName="nvarchar(128)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Cate_Id { get; set; }
 
@@ -102,6 +109,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品价格")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Price { get; set; }
 
@@ -111,6 +119,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="会员价格")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Vip_Price { get; set; }
 
@@ -120,6 +129,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="市场价")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Ot_Price { get; set; }
 
@@ -129,6 +139,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="邮费")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Postage { get; set; }
 
@@ -138,6 +149,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="单位名")]
        [MaxLength(64)]
        [Column(TypeName="nvarchar(64)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Unit_Name { get; set; }
 
@@ -146,6 +158,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="排序")]
        [Column(TypeName="smallint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public int Sort { get; set; }
 
@@ -154,6 +167,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="销量")]
        [Column(TypeName="int")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public int Sales { get; set; }
 
@@ -162,14 +176,16 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="库存")]
        [Column(TypeName="int")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public int Stock { get; set; }
 
        /// <summary>
-       ///状态（0：未上架，1：上架）
+       ///状态
        /// </summary>
-       [Display(Name ="状态（0：未上架，1：上架）")]
+       [Display(Name ="状态")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Show { get; set; }
 
@@ -178,6 +194,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否热卖")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Hot { get; set; }
 
@@ -186,6 +203,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否优惠")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_benefit { get; set; }
 
@@ -194,6 +212,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否精品")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_best { get; set; }
 
@@ -202,6 +221,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否新品")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_New { get; set; }
 
@@ -218,6 +238,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否包邮")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Postage { get; set; }
 
@@ -230,10 +251,11 @@ namespace VOL.Entity.DomainModels
        public byte Is_Del { get; set; }
 
        /// <summary>
-       ///商户是否代理 0不可代理1可代理
+       ///商户是否代理
        /// </summary>
-       [Display(Name ="商户是否代理 0不可代理1可代理")]
+       [Display(Name ="商户是否代理")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Mer_Use { get; set; }
 
@@ -243,6 +265,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="获得积分")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Give_Integral { get; set; }
 
@@ -252,22 +275,25 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="成本价")]
        [DisplayFormat(DataFormatString="8,2")]
        [Column(TypeName="decimal")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public decimal Cost { get; set; }
 
        /// <summary>
-       ///秒杀状态 0 未开启 1已开启
+       ///秒杀状态
        /// </summary>
-       [Display(Name ="秒杀状态 0 未开启 1已开启")]
+       [Display(Name ="秒杀状态")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Seckill { get; set; }
 
        /// <summary>
-       ///砍价状态 0未开启 1开启
+       ///砍价状态
        /// </summary>
-       [Display(Name ="砍价状态 0未开启 1开启")]
+       [Display(Name ="砍价状态")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        public byte? Is_bargain { get; set; }
 
        /// <summary>
@@ -275,6 +301,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否优品推荐")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Good { get; set; }
 
@@ -283,6 +310,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="是否单独分佣")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Is_Sub { get; set; }
 
@@ -291,6 +319,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="虚拟销量")]
        [Column(TypeName="int")]
+       [Editable(true)]
        public int? Ficti { get; set; }
 
        /// <summary>
@@ -298,6 +327,7 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="浏览量")]
        [Column(TypeName="int")]
+       [Editable(true)]
        public int? Browse { get; set; }
 
        /// <summary>
@@ -306,6 +336,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品二维码地址(用户小程序海报)")]
        [MaxLength(128)]
        [Column(TypeName="nvarchar(128)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Code_Path { get; set; }
 
@@ -315,6 +346,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="淘宝京东1688类型")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
+       [Editable(true)]
        public string Soure_Link { get; set; }
 
        /// <summary>
@@ -323,6 +355,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="主图视频链接")]
        [MaxLength(400)]
        [Column(TypeName="nvarchar(400)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string VIdeo_Link { get; set; }
 
@@ -331,23 +364,26 @@ namespace VOL.Entity.DomainModels
        /// </summary>
        [Display(Name ="运费模板Id")]
        [Column(TypeName="int")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public int Temp_Id { get; set; }
 
        /// <summary>
-       ///规格 0单 1多
+       ///规格
        /// </summary>
-       [Display(Name ="规格 0单 1多")]
+       [Display(Name ="规格")]
        [Column(TypeName="tinyint")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public byte Spec_Type { get; set; }
 
        /// <summary>
-       ///活动显示排序1=秒杀，2=砍价，3=拼团
+       ///活动显示排序
        /// </summary>
-       [Display(Name ="活动显示排序1=秒杀，2=砍价，3=拼团")]
+       [Display(Name ="活动显示排序")]
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
+       [Editable(true)]
        [Required(AllowEmptyStrings=false)]
        public string Activity { get; set; }
 

@@ -17,10 +17,10 @@ namespace VOL.Entity.DomainModels
     public class Hiiops_Shop_Wechat_Key:BaseEntity
     {
         /// <summary>
-       ///
+       ///主键
        /// </summary>
        [Key]
-       [Display(Name ="Id")]
+       [Display(Name ="主键")]
        [Column(TypeName="int")]
        [Required(AllowEmptyStrings=false)]
        public int Id { get; set; }

@@ -474,7 +474,7 @@ namespace Hiiops.Applet.Services
             Random rnd = new Random();
             int rand = rnd.Next(1000, 9999);
             CacheContext.Add(phone + "ValidateSMSCode", rand + "", DateTime.Now.AddMinutes(10).GetTimeSpan());
-            return _smsservice.SendTemplateSms(phone, signName, templateCode, templateParam);
+            return _smsservice.SendTemplateSms(regionId,accessKeyId,secret, phone, signName, templateCode, templateParam);
 
             //return new WebResponseContent().OK(message: "获取成功", data: new { img = $"data:image/jpeg;base64,{Convert.ToBase64String(data.ToArray())}", sessionKey = guid });
         }

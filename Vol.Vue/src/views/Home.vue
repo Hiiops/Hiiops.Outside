@@ -57,7 +57,7 @@
     },
     mounted() {
       this.options.bar.title = {
-        subtext: "数据来自中启汽车小程序",
+        subtext: "商城运营数据",
         x: "center"
       };
       let $bar = echarts.init(document.getElementById(this.bar));

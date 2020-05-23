@@ -26,3 +26,17 @@ F:\cam\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.dll
 F:\cam\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.deps.json
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.dll
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\Hiiops.Applet.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Core.dll
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Applet\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csprojAssemblyReference.cache
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CoreCompileInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.AssemblyInfoInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.AssemblyInfo.cs
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.csproj.CopyComplete
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.dll
+H:\github20200516\github\Vue.Net\Hiiops.Applet\obj\Debug\netcoreapp3.1\Hiiops.Applet.pdb

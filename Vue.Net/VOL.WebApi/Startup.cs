@@ -114,7 +114,8 @@ namespace VOL.WebApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "VOL.Core后台Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "后台Api", Version = "v1" });
+               // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 var security = new Dictionary<string, IEnumerable<string>>
                 { { AppSetting.Secret.Issuer, new string[] { } }};
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
