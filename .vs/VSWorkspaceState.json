@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DB",
+    "\\DB\\mysql",
+    "\\DB\\sqlserver",
+    "\\Vue.Net\\Hiiops.Applet",
+    "\\Vue.Net\\Hiiops.Applet\\IServices",
+    "\\Vue.Net\\Hiiops.Applet\\Services",
+    "\\Vue.Net\\VOL.WebApi",
+    "\\Vue.Net\\VOL.WebApi\\Controllers"
+  ],
+  "PreviewInSolutionExplorer": false
+}
