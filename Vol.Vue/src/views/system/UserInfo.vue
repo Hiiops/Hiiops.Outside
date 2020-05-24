@@ -9,16 +9,7 @@
           </p>
           <p class="date">
             <span>注册日期：{{userInfo.createDate}}</span>
-          </p>
-          <p>
-            <Button
-              style="padding: 3px 16px;"
-              @click="modifyImg"
-              type="info"
-              size="small"
-              ghost
-            >修改头像</Button>
-          </p>
+          </p> 
         </div>
       </div>
       <Divider>
@@ -27,23 +18,23 @@
       <Card class="binding-group" shadow>
         <CellGroup>
           <Cell :title="'手机：'+(userInfo.phoneNo||'未绑定')">
-            <Button
+            <!-- <Button
               type="success"
               size="small"
               @click="modifyPhone"
               icon="md-phone-portrait"
               slot="extra"
-            >修改手机</Button>
+            >修改手机</Button> -->
           </Cell>
           <Cell :title="'邮箱：'+(userInfo.email||'未绑定')">
-            <Button
+            <!-- <Button
               type="info"
               size="small"
               @click="modifyEmail"
               icon="ios-mail-outline"
               slot="extra"
-            >绑定邮箱</Button>
-          </Cell>
+            >绑定邮箱</Button> -->
+          </Cell> 
         </CellGroup>
       </Card>
       <div style="padding: 17px;">
@@ -58,14 +49,17 @@
           </Divider>
         </div>
         <div slot="footer">
-          <Button
+            <p>
+            <span>修改请到权限管理-用户管理修改</span>
+          </p>
+          <!-- <Button
             style="margin-top: 2px;"
             type="info"
             size="large"
             icon="md-checkmark-circle"
             long
             @click="modifyInfo"
-          >保存</Button>
+          >保存</Button> -->
         </div>
       </vol-form>
     </div>

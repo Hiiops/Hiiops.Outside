@@ -36,11 +36,10 @@
                     sortName: "User_Id"
                 },
                 extend: extend,
-                editFormFileds: {"UserName":"","UserTrueName":"","Role_Id":"","UserPwd":"","IsRegregisterPhone":"","Gender":"","Enable":"","CreateDate":"","Creator":"","Remark":"","HeadImageUrl":""},
+                editFormFileds: {"UserName":"","UserTrueName":"","Role_Id":"","IsRegregisterPhone":"","Gender":"","Enable":"","CreateDate":"","Creator":"","Remark":"","HeadImageUrl":""},
                 editFormOptions: [[{"title":"帐号","required":true,"field":"UserName","disabled":true},
                                {"title":"真实姓名","required":true,"field":"UserTrueName","type":"text"}],
                               [{"dataKey":"roles","title":"角色","required":true,"field":"Role_Id","type":"select"},
-                               {"title":"密码","field":"UserPwd"},
                                {"dataKey":"isphone","title":"手机用户","required":true,"field":"IsRegregisterPhone","type":"select"}],
                               [{"dataKey":"gender","title":"性别","field":"Gender","type":"select"},
                                {"dataKey":"enable","title":"是否可用","required":true,"field":"Enable","type":"select"}],

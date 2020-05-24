@@ -38,9 +38,8 @@ namespace VOL.Entity.DomainModels
        ///头像
        /// </summary>
        [Display(Name ="头像")]
-       [MaxLength(2000)]
-       [Column(TypeName="nvarchar(2000)")]
-       public string HeadImgUrl { get; set; }
+       [Column(TypeName="nvarchar")]
+       public DateTime? HeadImgUrl { get; set; }
 
        /// <summary>
        ///搜索记录
@@ -210,14 +209,6 @@ namespace VOL.Entity.DomainModels
        [MaxLength(510)]
        [Column(TypeName="nvarchar(510)")]
        public string Account { get; set; }
-
-       /// <summary>
-       ///邮箱
-       /// </summary>
-       [Display(Name ="邮箱")]
-       [MaxLength(510)]
-       [Column(TypeName="nvarchar(510)")]
-       public string Email { get; set; }
 
        
     }

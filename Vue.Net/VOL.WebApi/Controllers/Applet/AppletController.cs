@@ -35,8 +35,8 @@ namespace Hiiops.Cart.Controllers
         /// </summary>
         /// <param name="loginInfo"></param>
         /// <returns></returns>
-        [HttpPost, HttpGet, Route("getToken"), AllowAnonymous] 
-        public async Task<IActionResult> Login(string code)
+        [HttpPost, HttpGet, Route("Code2Token"), AllowAnonymous]
+        public async Task<IActionResult> LoginWithCode(string code)
         {
             return Json(await service.Login(code));
         }
@@ -45,11 +45,11 @@ namespace Hiiops.Cart.Controllers
         /// </summary>
         /// <param name="loginInfo"></param>
         /// <returns></returns>
-        [HttpPost, HttpGet, Route("getToken"), AllowAnonymous]
+        [HttpPost, HttpGet, Route("Phone2Token"), AllowAnonymous]
         [ObjectModelValidatorFilter(ValidatorModel.Login)]
-        public async Task<IActionResult> Login(string code,string phone)
+        public async Task<IActionResult> LoginWithPhone(string code, string phone)
         {
-            return Json(await service.Login(code,phone));
+            return Json(await service.Login(code, phone));
         }
 
 
@@ -93,9 +93,13 @@ namespace Hiiops.Cart.Controllers
         {
             return Json(service.ValidateCode());
         }
+        [HttpPost, HttpGet, Route("ValidateSMSCode"), AllowAnonymous]
         /// <summary>
         /// 获取验证码
         /// </summary>
+        /// <param name="sessionKey"></param>
+        /// <param name="code"></param>
+        /// <param name="phone"></param>
         /// <returns></returns>
         public IActionResult ValidateSMSCode(string sessionKey, string code, string phone)
         {

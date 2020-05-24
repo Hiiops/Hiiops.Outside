@@ -360,7 +360,7 @@ namespace Hiiops.Applet.Services
         {
             //判断一下系统是否存在账户
             var seller = DbContext.Set<Hiiops_Cart_SellerUser>()
-                .Where(x => x.Account == hiiops_Cart_SellerUser.Account || x.OpenId == hiiops_Cart_SellerUser.OpenId || x.Phone == hiiops_Cart_SellerUser.Phone || x.Email == hiiops_Cart_SellerUser.Email)
+                .Where(x => x.Account == hiiops_Cart_SellerUser.Account || x.OpenId == hiiops_Cart_SellerUser.OpenId || x.Phone == hiiops_Cart_SellerUser.Phone )
                 .FirstOrDefaultAsync();
             if (seller != null)
                 return new WebResponseContent().Error("账户已经存在,请直接登录");

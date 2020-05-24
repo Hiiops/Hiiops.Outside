@@ -3,7 +3,7 @@
     <!-- <div class="log-bg"></div> -->
     <div class="login-contianer">
       <div class="login-project"> 
-        <span class="desc">Hiiops PSaas shop </span>
+        <span class="desc">中启汽车 </span>
       </div>
       <div class="login-form">
         <Menu mode="horizontal" style="margin-bottom: 30px;" active-name="1">
@@ -45,7 +45,7 @@
         <div style="loging-btn">
           <Button size="large" type="info" @click="login" long>登陆</Button>
         </div>
-        <div style="padding-top: 10px;text-align: right;">海心科技&&copy</div>
+        <div style="padding-top: 10px;text-align: right;">海心科技-技术支持&&copy</div>
         <div class="action">
           <a @click="()=>{}">注册</a>
           <a @click="()=>{}">忘记密码</a>

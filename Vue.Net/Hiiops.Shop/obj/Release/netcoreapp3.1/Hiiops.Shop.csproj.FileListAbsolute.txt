@@ -12,3 +12,17 @@ F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.Assembly
 F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csproj.CopyComplete
 F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.dll
 F:\cam\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.deps.json
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.dll
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\Hiiops.Shop.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Core.dll
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Entity.dll
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Core.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Shop\bin\Release\netcoreapp3.1\VOL.Entity.pdb
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csprojAssemblyReference.cache
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csproj.CoreCompileInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.AssemblyInfoInputs.cache
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.AssemblyInfo.cs
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.csproj.CopyComplete
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.dll
+H:\github20200516\github\Vue.Net\Hiiops.Shop\obj\Release\netcoreapp3.1\Hiiops.Shop.pdb
