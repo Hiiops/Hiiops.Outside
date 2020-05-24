@@ -194,5 +194,13 @@ let viewgird = [
         path: '/Hiiops_Shop_Wechat_Key',
         name: 'Hiiops_Shop_Wechat_Key',
         component: () => import('@/views/shop/Hiiops_Shop_Wechat_Key.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Express',
+        name: 'Hiiops_Shop_Express',
+        component: () => import('@/views/shop/Hiiops_Shop_Express.vue')
+    }    ,{
+        path: '/Hiiops_Shop_Shipping_Templates',
+        name: 'Hiiops_Shop_Shipping_Templates',
+        component: () => import('@/views/shop/Hiiops_Shop_Shipping_Templates.vue')
     }]
 export default viewgird

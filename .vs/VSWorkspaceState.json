@@ -1,13 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Vue.Net",
-    "\\Vue.Net\\Hiiops.Shop",
-    "\\Vue.Net\\VOL.WebApi",
-    "\\Vue.Net\\VOL.WebApi\\Template",
-    "\\Vue.Net\\VOL.WebApi\\Template\\IRepositorys",
-    "\\Vue.Net\\VOL.WebApi\\wwwroot"
+    "\\DB",
+    "\\DB\\mysql",
+    "\\DB\\sqlserver"
   ],
-  "SelectedNode": "\\Vue.Net\\VOL.WebApi\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }
