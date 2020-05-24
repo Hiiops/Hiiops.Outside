@@ -357,7 +357,7 @@ body {
   position: relative;
   width: 100%;
   display: inline-block;
-  border-top: 1px solid #e4e4e4;
+  /* border-top: 1px solid #e4e4e4; */
   border-bottom: 2px solid #eee;
   /* z-index: 1; */
 }
@@ -370,6 +370,7 @@ body {
   height: 60px;
   width: 100%;
   position: relative;
+  border-bottom: 1px solid #eee;
   /* line-height: 60px; */
   /* background-color: #272929; */
 }
@@ -446,7 +447,7 @@ body {
 }
 .header-navigation {
   cursor: pointer;
-    box-shadow: 3px 0px 6px #f6f7f7;
+  box-shadow: 3px 0px 6px #f6f7f7;
   border-bottom: 1px solid #eee;
   // border-top: 1px solid #eee;
   height: 32px;
@@ -771,11 +772,10 @@ img:not([src]) {
   //   color: white;
   // }
 
-
   .header-navigation {
     box-shadow: -7px 11px 10px -13px #678aa7;
     border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
+    // border-top: 1px solid #eee;
     height: 32px;
     overflow: hidden;
     line-height: 32px;
@@ -802,7 +802,6 @@ img:not([src]) {
 }
 </style>
 <style  scoped>
-
 .vol-theme-white .vol-aside >>> .ivu-menu-submenu-title {
   background: #005bb8 !important;
 }
