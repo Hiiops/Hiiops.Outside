@@ -59,7 +59,7 @@ namespace VOL.Core.Controllers.Basic
         /// <returns></returns>
         [HttpPost, Route("Upload")]
         [ApiActionPermission(Enums.ActionPermissionOptions.Upload)]
-        public   async Task<IActionResult> Upload(IEnumerable<IFormFile> fileInput)
+        public virtual  async Task<IActionResult> Upload(IEnumerable<IFormFile> fileInput)
         {
             return await base.Upload(fileInput.ToList());
         }

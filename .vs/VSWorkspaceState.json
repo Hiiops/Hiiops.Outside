@@ -1,9 +1,19 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DB",
-    "\\DB\\mysql",
-    "\\DB\\sqlserver"
+    "\\Vol.Vue",
+    "\\Vol.Vue\\src",
+    "\\Vol.Vue\\src\\api",
+    "\\Vue.Net",
+    "\\Vue.Net\\VOL.System",
+    "\\Vue.Net\\VOL.System\\Services",
+    "\\Vue.Net\\VOL.System\\Services\\System",
+    "\\Vue.Net\\VOL.System\\Services\\System\\Partial",
+    "\\Vue.Net\\VOL.WebApi",
+    "\\Vue.Net\\VOL.WebApi\\Controllers",
+    "\\Vue.Net\\VOL.WebApi\\Controllers\\System",
+    "\\Vue.Net\\VOL.WebApi\\Controllers\\System\\Partial"
   ],
+  "SelectedNode": "\\Vol.Vue\\src\\api\\http.js",
   "PreviewInSolutionExplorer": false
 }
