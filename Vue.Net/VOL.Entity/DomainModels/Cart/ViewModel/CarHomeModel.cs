@@ -57,4 +57,25 @@ namespace VOL.Entity.DomainModels.Cart.ViewModel
         /// </summary>
         public List<Hiiops_Cart> Hiiops_Carts { get; set; } = new List<Hiiops_Cart>();
     }
+
+    /// <summary>
+    /// 分类
+    /// </summary>
+    public class Category
+    {
+        /// <summary>
+        /// id
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
+        /// 父类id
+        /// </summary>
+        public int PID { get; set; }
+        /// <summary>
+        /// 名称
+        /// </summary>
+        public string Name { get; set; }
+
+    }
+
 }

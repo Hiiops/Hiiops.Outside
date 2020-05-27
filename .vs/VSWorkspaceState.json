@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Vol.Vue",
-    "\\Vol.Vue\\src",
-    "\\Vol.Vue\\src\\api",
     "\\Vue.Net",
+    "\\Vue.Net\\Hiiops.Applet",
+    "\\Vue.Net\\Hiiops.Applet\\Services",
     "\\Vue.Net\\VOL.System",
     "\\Vue.Net\\VOL.System\\Services",
     "\\Vue.Net\\VOL.System\\Services\\System",
@@ -14,6 +13,6 @@
     "\\Vue.Net\\VOL.WebApi\\Controllers\\System",
     "\\Vue.Net\\VOL.WebApi\\Controllers\\System\\Partial"
   ],
-  "SelectedNode": "\\Vol.Vue\\src\\api\\http.js",
+  "SelectedNode": "\\Vue.Net\\VOL.sln",
   "PreviewInSolutionExplorer": false
 }
