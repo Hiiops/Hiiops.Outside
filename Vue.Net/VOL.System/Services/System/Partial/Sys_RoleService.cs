@@ -19,16 +19,38 @@ namespace VOL.System.Services
 
         public override PageGridData<Sys_Role> GetPageData(PageDataOptions pageData)
         {
-            //角色Id=1默认为超级管理员角色，界面上不显示此角色
+             int roleId = -1;
+            //树形菜单传查询角色下所有用户
+            if (pageData.Value != null)
+            {
+                roleId = pageData.Value.ToString().GetInt();
+            }
             QueryRelativeExpression = (IQueryable<Sys_Role> queryable) =>
             {
-                if (UserContext.Current.IsSuperAdmin)
+                if (roleId <= 0)
                 {
-                    return queryable;
+                    if (UserContext.Current.IsSuperAdmin) return queryable;
+                    roleId = UserContext.Current.RoleId;
                 }
-                List<int> roleIds = GetAllChildrenRoleIdAndSelf();
+
+                //查看用户时，只能看下自己角色下的所有用户
+                List<int> roleIds = Sys_RoleService
+                   .Instance
+                   .GetAllChildrenRoleId(roleId).Result;
+                roleIds.Add(roleId);
+                //判断查询的角色是否越权
+                if (roleId != UserContext.Current.RoleId && !roleIds.Contains(roleId))
+                {
+                    roleId = -999;
+                }
                 return queryable.Where(x => roleIds.Contains(x.Role_Id));
             };
+
+            //角色Id=1默认为超级管理员角色，界面上不显示此角色
+            //QueryRelativeExpression = (IQueryable<Sys_Role> queryable) =>
+            //{
+            //    return queryable.Where(x => x.Role_Id > 1);
+            //};
             return base.GetPageData(pageData);
         }
         /// <summary>
