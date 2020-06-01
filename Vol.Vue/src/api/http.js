@@ -13,10 +13,10 @@ if (process.env.NODE_ENV == 'development') {
     axios.defaults.baseURL = 'http://localhost:9991/';
 }
 else if (process.env.NODE_ENV == 'debug') {
-    axios.defaults.baseURL = 'http://106.55.21.23:9991/';
+    axios.defaults.baseURL = 'http://localhost:9991/';
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'https://hiiops.0ps.top/';
+  axios.defaults.baseURL = 'http://localhost:9991/';
 }
 let ipAddress = axios.defaults.baseURL;
 axios.interceptors.request.use((config) => {
