@@ -3,7 +3,10 @@
     "",
     "\\DB",
     "\\DB\\mysql",
-    "\\DB\\sqlserver"
+    "\\DB\\sqlserver",
+    "\\Vue.Net",
+    "\\Vue.Net\\VOL.WebApi"
   ],
+  "SelectedNode": "\\Vue.Net\\VOL.sln",
   "PreviewInSolutionExplorer": false
 }
